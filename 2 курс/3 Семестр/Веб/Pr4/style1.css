@@ -1,0 +1,46 @@
+header {
+    display: flex;
+    align-items: center;
+}
+
+div {
+    display: flex;
+}
+
+div img {
+    border-radius: 100%;
+}
+
+nav {
+    text-align: right;
+    flex-grow: 1;
+}
+
+nav a {
+    color: chocolate;
+    padding: 10px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav a:hover {
+    color: crimson;
+}
+
+hr {
+    color: blue;
+}
+
+.chess {
+    grid-column: 8;
+    grid-row: 8;
+}
+
+.white {
+    background-color: white;
+
+}
+
+.black {
+    background-color: black;
+}

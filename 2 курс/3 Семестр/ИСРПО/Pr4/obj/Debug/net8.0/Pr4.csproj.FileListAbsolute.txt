@@ -1,0 +1,14 @@
+C:\Users\Lima148\Desktop\College\C#\Pr4\bin\Debug\net8.0\Pr4.exe
+C:\Users\Lima148\Desktop\College\C#\Pr4\bin\Debug\net8.0\Pr4.deps.json
+C:\Users\Lima148\Desktop\College\C#\Pr4\bin\Debug\net8.0\Pr4.runtimeconfig.json
+C:\Users\Lima148\Desktop\College\C#\Pr4\bin\Debug\net8.0\Pr4.dll
+C:\Users\Lima148\Desktop\College\C#\Pr4\bin\Debug\net8.0\Pr4.pdb
+C:\Users\Lima148\Desktop\College\C#\Pr4\obj\Debug\net8.0\Pr4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lima148\Desktop\College\C#\Pr4\obj\Debug\net8.0\Pr4.AssemblyInfoInputs.cache
+C:\Users\Lima148\Desktop\College\C#\Pr4\obj\Debug\net8.0\Pr4.AssemblyInfo.cs
+C:\Users\Lima148\Desktop\College\C#\Pr4\obj\Debug\net8.0\Pr4.csproj.CoreCompileInputs.cache
+C:\Users\Lima148\Desktop\College\C#\Pr4\obj\Debug\net8.0\Pr4.dll
+C:\Users\Lima148\Desktop\College\C#\Pr4\obj\Debug\net8.0\refint\Pr4.dll
+C:\Users\Lima148\Desktop\College\C#\Pr4\obj\Debug\net8.0\Pr4.pdb
+C:\Users\Lima148\Desktop\College\C#\Pr4\obj\Debug\net8.0\Pr4.genruntimeconfig.cache
+C:\Users\Lima148\Desktop\College\C#\Pr4\obj\Debug\net8.0\ref\Pr4.dll

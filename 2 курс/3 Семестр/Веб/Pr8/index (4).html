@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+</head>
+<body>
+    <script>
+        // let fruits = ["apple", "banana", "cherry", "date", "fig", "grape"]
+        // let array = []
+        // for(let i = 0; i < fruits.length; i++) {
+        //     if (fruits[i].length % 2 == 0) {
+        //         array.unshift(fruits[i])
+        //     }
+        //     else {
+        //         array.push(fruits[i])
+        //     }
+        // }
+        // array.forEach(element => {
+        //     console.log(element)
+        // });
+
+        function Length(a, b) {
+            return a.length - b.length
+        }
+
+        let input = prompt("Enter sentence: ")
+        let inputSplit = input.split(" ").sort(Length).join(" ")
+        console.log(inputSplit)
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,820 @@
+﻿**********************
+Начало записи сценария Windows PowerShell
+Время начала: 20241022203011
+Имя пользователя: DESKTOP-RNRB7MP\Lima148
+Запуск от имени пользователя: DESKTOP-RNRB7MP\Lima148
+Имя конфигурации: 
+Компьютер: DESKTOP-RNRB7MP (Microsoft Windows NT 10.0.19045.0)
+Ведущее приложение: PowerShell.exe -noexit -command Set-Location -literalPath 'C:\Users\Lima148\Desktop\College\Операционные системы\Pr7'
+ИД процесса: 8680
+PSVersion: 5.1.19041.5007
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.5007
+BuildVersion: 10.0.19041.5007
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Транскрибирование запущено, выходной файл Ryzhov.txt
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $car = [PSCustomObject]@{
+Make = "Heaven"
+Model = "Saint"
+Year = "2025"
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $car.Make
+Heaven
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $car | Add-Member -MemberType ScriptMethod -Name "drive(distance)" -Value {Write-Host "Driving {distance} km"}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $car.drive
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $car | Get-Member
+
+
+   TypeName: System.Management.Automation.PSCustomObject
+
+Name            MemberType   Definition
+----            ----------   ----------
+Equals          Method       bool Equals(System.Object obj)
+GetHashCode     Method       int GetHashCode()
+GetType         Method       type GetType()
+ToString        Method       string ToString()
+Make            NoteProperty string Make=Heaven
+Model           NoteProperty string Model=Saint
+Year            NoteProperty string Year=2025
+drive(distance) ScriptMethod System.Object drive(distance)();
+
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $car | Add-Member -MemberType ScriptMethod -Name "drive" -Value {Write-Host "Driving {distance} km"}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $car.drive
+
+
+Script              : Write-Host "Driving {distance} km"
+OverloadDefinitions : {System.Object drive();}
+MemberType          : ScriptMethod
+TypeNameOfValue     : System.Object
+Value               : System.Object drive();
+Name                : drive
+IsInstance          : True
+
+
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $car.drive()
+Driving {distance} km
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $car.drive(13)
+Driving {distance} km
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $car | Add-Member -MemberType ScriptMethod -Name "drive{distance}" -Value {Write-Host "Driving {distance} km"}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $car | Get-Member
+
+
+   TypeName: System.Management.Automation.PSCustomObject
+
+Name            MemberType   Definition
+----            ----------   ----------
+Equals          Method       bool Equals(System.Object obj)
+GetHashCode     Method       int GetHashCode()
+GetType         Method       type GetType()
+ToString        Method       string ToString()
+Make            NoteProperty string Make=Heaven
+Model           NoteProperty string Model=Saint
+Year            NoteProperty string Year=2025
+drive           ScriptMethod System.Object drive();
+drive(distance) ScriptMethod System.Object drive(distance)();
+drive{distance} ScriptMethod System.Object drive{distance}();
+
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $car.drive(13)
+Driving {distance} km
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $car.GetType()
+
+IsPublic IsSerial Name                                     BaseType
+-------- -------- ----                                     --------
+True     False    PSCustomObject                           System.Object
+
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $cat = New-Object -TypeName PSCustomObject
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $cat | Add-Member -MemberType NoteProperty -Name "Name" -Value "Boris"
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $cat | Add-Member -MemberType NoteProperty -Name "Name" -Value "bOris"
+Add-Member : Не удается добавить элемент с именем "Name", так как элемент с таким именем уже существует. Чтобы все равно
+ перезаписать этот элемент, добавьте в команду параметр Force.
+строка:1 знак:8
++ $cat | Add-Member -MemberType NoteProperty -Name "Name" -Value "bOris ...
++        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (@{Name=Boris}:PSObject) [Add-Member], InvalidOperationException
+    + FullyQualifiedErrorId : MemberAlreadyExists,Microsoft.PowerShell.Commands.AddMemberCommand
+Add-Member : Не удается добавить элемент с именем "Name", так как элемент с таким именем уже существует. Чтобы все равн
+о перезаписать этот элемент, добавьте в команду параметр Force.
+строка:1 знак:8
++ $cat | Add-Member -MemberType NoteProperty -Name "Name" -Value "bOris ...
++        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (@{Name=Boris}:PSObject) [Add-Member], InvalidOperationException
+    + FullyQualifiedErrorId : MemberAlreadyExists,Microsoft.PowerShell.Commands.AddMemberCommand
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $cat | Add-Member -MemberType NoteProperty -Name "Age" -Value "42"
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $cat.Name = "Whiskers"
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $cat | Add-Member -MemberType ScriptMethod -Name "meow" -Value {Write-Host "Meow!"}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $cat.meow()
+Meow!
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $cat.psobject.properties.remove("Age")
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $cat | Get-Member
+
+
+   TypeName: System.Management.Automation.PSCustomObject
+
+Name        MemberType   Definition
+----        ----------   ----------
+Equals      Method       bool Equals(System.Object obj)
+GetHashCode Method       int GetHashCode()
+GetType     Method       type GetType()
+ToString    Method       string ToString()
+Name        NoteProperty string Name=Whiskers
+meow        ScriptMethod System.Object meow();
+
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $person = New-Object -TypeName PSCustomObject
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $person | Add-Member -MemberType ScriptMethod -Name "walk"-Value ""
+>> TerminatingError(Add-Member): "Не удается преобразовать значение "" типа "System.String" в тип "System.Management.Automation.ScriptBlock"."
+Add-Member : Не удается преобразовать значение "" типа "System.String" в тип "System.Management.Automation.ScriptBlock".
+строка:1 знак:11
++ $person | Add-Member -MemberType ScriptMethod -Name "walk"-Value ""
++           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Add-Member], PSInvalidCastException
+    + FullyQualifiedErrorId : ConvertToFinalInvalidCastException,Microsoft.PowerShell.Commands.AddMemberCommand
+Add-Member : Не удается преобразовать значение "" типа "System.String" в тип "System.Management.Automation.ScriptBlock"
+.
+строка:1 знак:11
++ $person | Add-Member -MemberType ScriptMethod -Name "walk"-Value ""
++           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Add-Member], PSInvalidCastException
+    + FullyQualifiedErrorId : ConvertToFinalInvalidCastException,Microsoft.PowerShell.Commands.AddMemberCommand
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $person | Add-Member -MemberType ScriptMethod -Name "walk"-Value
+>> TerminatingError(Add-Member): "Отсутствует аргумент для параметра "Value". Укажите параметр типа "System.Object" и повторите попытку."
+Add-Member : Отсутствует аргумент для параметра "Value". Укажите параметр типа "System.Object" и повторите попытку.
+строка:1 знак:59
++ $person | Add-Member -MemberType ScriptMethod -Name "walk"-Value
++                                                           ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Add-Member], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.AddMemberCommand
+Add-Member : Отсутствует аргумент для параметра "Value". Укажите параметр типа "System.Object" и повторите попытку.
+строка:1 знак:59
++ $person | Add-Member -MemberType ScriptMethod -Name "walk"-Value
++                                                           ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Add-Member], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.AddMemberCommand
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $person | Add-Member -MemberType ScriptMethod -Name "walk"-Value {Write-Host "Walk"}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $person | Add-Member -MemberType ScriptMethod -Name "talk"-Value {Write-Host "talk"}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $person | Add-Member -MemberType ScriptMethod -Name "eat"-Value {Write-Host "eat"}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $person | Get-Member
+
+
+   TypeName: System.Management.Automation.PSCustomObject
+
+Name        MemberType   Definition
+----        ----------   ----------
+Equals      Method       bool Equals(System.Object obj)
+GetHashCode Method       int GetHashCode()
+GetType     Method       type GetType()
+ToString    Method       string ToString()
+eat         ScriptMethod System.Object eat();
+talk        ScriptMethod System.Object talk();
+walk        ScriptMethod System.Object walk();
+
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $book = New-Object -TypeName PSCustomObject
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $book | Add-Member -MemberType NoteProperty -Name "Title"-Value {Write-Host "Any Title"}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $book | Add-Member -MemberType NoteProperty -Name "Author"-Value {Write-Host "Any Author"}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $book | Add-Member -MemberType NoteProperty -Name "Pages"-Value {Write-Host "Number of Pages"}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $book | Get-Member
+
+
+   TypeName: System.Management.Automation.PSCustomObject
+
+Name        MemberType   Definition
+----        ----------   ----------
+Equals      Method       bool Equals(System.Object obj)
+GetHashCode Method       int GetHashCode()
+GetType     Method       type GetType()
+ToString    Method       string ToString()
+Author      NoteProperty scriptblock Author=Write-Host "Any Author"
+Pages       NoteProperty scriptblock Pages=Write-Host "Number of Pages"
+Title       NoteProperty scriptblock Title=Write-Host "Any Title"
+
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr = @(
+$student1 = [PSCustomObject]@{
+age = 19
+name = "Oleg"
+}
+$student2 = [PSCustomObject]@{
+age = 20
+name = "Alex"
+}
+$student3 = [PSCustomObject]@{
+age = 17
+name = "Julia"
+}
+)
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> Write-Host $arr
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr[0]
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> Write-Host $arr[0]
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr.GetType()
+
+IsPublic IsSerial Name                                     BaseType
+-------- -------- ----                                     --------
+True     True     Object[]                                 System.Array
+
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr.GetType().GetType()
+
+IsPublic IsSerial Name                                     BaseType
+-------- -------- ----                                     --------
+False    True     RuntimeType                              System.Reflection.TypeInfo
+
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr[0.name]
+строка:1 знак:6
++ $arr[0.name]
++      ~
+Выражение индекса массива отсутствует или недопустимо.
+
+строка:1 знак:6
++ $arr[0.name]
++      ~~~~~~~
+Непредвиденная лексема "0.name]" в выражении или операторе.
+строка:1 знак:6
++ $arr[0.name]
++      ~
+Выражение индекса массива отсутствует или недопустимо.
+
+строка:1 знак:6
++ $arr[0.name]
++      ~~~~~~~
+Непредвиденная лексема "0.name]" в выражении или операторе.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingArrayIndexExpression
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr[0]
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr[0].name
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $computer = New-Object -TypeName PSCustomObject
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $computer | Add-Member -MemberType ScriptMethod -Name "start"
+>> TerminatingError(Add-Member): "Не удается преобразовать значение "{Write-Host "start"}" типа "System.String" в тип "System.Management.Automation.ScriptBlock"."
+Add-Member : Не удается преобразовать значение "{Write-Host "start"}" типа "System.String" в тип "System.Management.Auto
+mation.ScriptBlock".
+строка:1 знак:13
++ $computer | Add-Member -MemberType ScriptMethod -Name "start"
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Add-Member], PSInvalidCastException
+    + FullyQualifiedErrorId : ConvertToFinalInvalidCastException,Microsoft.PowerShell.Commands.AddMemberCommand
+Add-Member : Не удается преобразовать значение "{Write-Host "start"}" типа "System.String" в тип "System.Management.Aut
+omation.ScriptBlock".
+строка:1 знак:13
++ $computer | Add-Member -MemberType ScriptMethod -Name "start"
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Add-Member], PSInvalidCastException
+    + FullyQualifiedErrorId : ConvertToFinalInvalidCastException,Microsoft.PowerShell.Commands.AddMemberCommand
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $computer | Add-Member -MemberType ScriptMethod -Name "start" -Value {Write-Host "start"}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $computer | Add-Member -MemberType ScriptMethod -Name "shutdown" -Value {Write-Host "shutdown"}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $computer | Add-Member -MemberType ScriptMethod -Name "restart" -Value {Write-Host "restart"}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $computer | Get-Member
+
+
+   TypeName: System.Management.Automation.PSCustomObject
+
+Name        MemberType   Definition
+----        ----------   ----------
+Equals      Method       bool Equals(System.Object obj)
+GetHashCode Method       int GetHashCode()
+GetType     Method       type GetType()
+ToString    Method       string ToString()
+restart     ScriptMethod System.Object restart();
+shutdown    ScriptMethod System.Object shutdown();
+start       ScriptMethod System.Object start();
+
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $university = New-Object -TypeName PSCustomObject -property @{
+Griffindor = @{AmountStudents = 100}
+Slytherin = @{AmountStudents = 50}
+Hufflepuff = @{AmountStudents = 70}
+Ravenclaw = @{AmountStudents = 140}
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $university
+
+Ravenclaw        Slytherin        Griffindor       Hufflepuff
+---------        ---------        ----------       ----------
+{AmountStudents} {AmountStudents} {AmountStudents} {AmountStudents}
+
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $dynamicObject = New-Object -TypeName PSCustomObject
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $dynamicObject | Add-Member -MemberType ScriptMethod -Name "Date" -Value {if Date == 22.10.2024: "It's 22.10.2024"}
+строка:1 знак:77
++ ... | Add-Member -MemberType ScriptMethod -Name "Date" -Value {if Date == ...
++                                                                  ~
+Отсутствует "(" в операторе if после "if".
+строка:1 знак:77
++ ... | Add-Member -MemberType ScriptMethod -Name "Date" -Value {if Date == ...
++                                                                  ~
+Отсутствует "(" в операторе if после "if".
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingOpenParenthesisInIfStatement
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $dynamicObject | Add-Member -MemberType ScriptMethod -Name "Date" -Value {if(Date == 22.10.2024) "It's 22.10.2024"}
+строка:1 знак:96
++ ... Type ScriptMethod -Name "Date" -Value {if(Date == 22.10.2024) "It's 2 ...
++                                                                 ~
+Отсутствует блок операторов после if ( условие ).
+строка:1 знак:96
++ ... Type ScriptMethod -Name "Date" -Value {if(Date == 22.10.2024) "It's 2 ...
++                                                                 ~
+Отсутствует блок операторов после if ( условие ).
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingStatementBlock
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $dynamicObject | Add-Member -MemberType ScriptMethod -Name "Date" -Value {Date}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $dynamicObject.Date()
+
+22 октября 2024 г. 22:15:11
+
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $light = New-Object -TypeName PSCustomObject
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $light | Add-Member -MemberType NoteProperty -Name "Bool" -Value {$True}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $light | Add-Member -MemberType ScriptMethod -Name "turnOn" -Value {if (Bool == $False) {Bool = $True}}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $light | Add-Member -MemberType ScriptMethod -Name "turnOff" -Value {if (Bool == $True) {Bool = $False}}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $light | Get-Member
+
+
+   TypeName: System.Management.Automation.PSCustomObject
+
+Name        MemberType   Definition
+----        ----------   ----------
+Equals      Method       bool Equals(System.Object obj)
+GetHashCode Method       int GetHashCode()
+GetType     Method       type GetType()
+ToString    Method       string ToString()
+Bool        NoteProperty scriptblock Bool=$True
+turnOff     ScriptMethod System.Object turnOff();
+turnOn      ScriptMethod System.Object turnOn();
+
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $light.turnOn()
+Исключение при вызове "turnOn" с "0" аргументами: "Имя "Bool" не распознано как имя командлета, функции, файла сценария 
+или выполняемой программы. Проверьте правильность написания имени, а также наличие и правильность пути, после чего повто
+рите попытку."
+строка:1 знак:1
++ $light.turnOn()
++ ~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ScriptMethodRuntimeException
+Исключение при вызове "turnOn" с "0" аргументами: "Имя "Bool" не распознано как имя командлета, функции, файла сценария
+ или выполняемой программы. Проверьте правильность написания имени, а также наличие и правильность пути, после чего пов
+торите попытку."
+строка:1 знак:1
++ $light.turnOn()
++ ~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ScriptMethodRuntimeException
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $light.turnOn($True)
+Исключение при вызове "turnOn" с "1" аргументами: "Имя "Bool" не распознано как имя командлета, функции, файла сценария 
+или выполняемой программы. Проверьте правильность написания имени, а также наличие и правильность пути, после чего повто
+рите попытку."
+строка:1 знак:1
++ $light.turnOn($True)
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ScriptMethodRuntimeException
+Исключение при вызове "turnOn" с "1" аргументами: "Имя "Bool" не распознано как имя командлета, функции, файла сценария
+ или выполняемой программы. Проверьте правильность написания имени, а также наличие и правильность пути, после чего пов
+торите попытку."
+строка:1 знак:1
++ $light.turnOn($True)
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ScriptMethodRuntimeException
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> arr1 = 1,2,3,4,5,6,7,8,9,10
+arr1 : Имя "arr1" не распознано как имя командлета, функции, файла сценария или выполняемой программы. Проверьте правиль
+ность написания имени, а также наличие и правильность пути, после чего повторите попытку.
+строка:1 знак:1
++ arr1 = 1,2,3,4,5,6,7,8,9,10
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (arr1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+arr1 : Имя "arr1" не распознано как имя командлета, функции, файла сценария или выполняемой программы. Проверьте правил
+ьность написания имени, а также наличие и правильность пути, после чего повторите попытку.
+строка:1 знак:1
++ arr1 = 1,2,3,4,5,6,7,8,9,10
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (arr1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> #arr1 = 1,2,3,4,5,6,7,8,9,10
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1 = 1,2,3,4,5,6,7,8,9,10
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1[3]
+4
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1[5] = 100
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1[5]
+100
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1
+1
+2
+3
+4
+5
+100
+7
+8
+9
+10
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1[10] = 11
+Индекс находился вне границ массива.
+строка:1 знак:1
++ $arr1[10] = 11
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], IndexOutOfRangeException
+    + FullyQualifiedErrorId : System.IndexOutOfRangeException
+Индекс находился вне границ массива.
+строка:1 знак:1
++ $arr1[10] = 11
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], IndexOutOfRangeException
+    + FullyQualifiedErrorId : System.IndexOutOfRangeException
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1 += 11
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1 
+1
+2
+3
+4
+5
+100
+7
+8
+9
+10
+11
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> Remove-Item $arr[0]
+>> TerminatingError(Remove-Item): "Не удается привязать аргумент к параметру "Path", так как он имеет значение NULL."
+Remove-Item : Не удается привязать аргумент к параметру "Path", так как он имеет значение NULL.
+строка:1 знак:13
++ Remove-Item $arr[0]
++             ~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Remove-Item], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Microsoft.PowerShell.Commands.RemoveItemCom
+mand
+Remove-Item : Не удается привязать аргумент к параметру "Path", так как он имеет значение NULL.
+строка:1 знак:13
++ Remove-Item $arr[0]
++             ~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Remove-Item], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Microsoft.PowerShell.Commands.RemoveItemC
+   ommand
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> Remove-Item -Path .\Ryzhov.txt $arr[0]
+>> TerminatingError(Remove-Item): "Не удается найти позиционный параметр, принимающий аргумент "$null"."
+Remove-Item : Не удается найти позиционный параметр, принимающий аргумент "$null".
+строка:1 знак:1
++ Remove-Item -Path .\Ryzhov.txt $arr[0]
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Remove-Item], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Не удается найти позиционный параметр, принимающий аргумент "$null".
+строка:1 знак:1
++ Remove-Item -Path .\Ryzhov.txt $arr[0]
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Remove-Item], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> Remove-Item -Path .\Ryzhov.txt $arr1[0]
+>> TerminatingError(Remove-Item): "Не удается найти позиционный параметр, принимающий аргумент "1"."
+Remove-Item : Не удается найти позиционный параметр, принимающий аргумент "1".
+строка:1 знак:1
++ Remove-Item -Path .\Ryzhov.txt $arr1[0]
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Remove-Item], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Не удается найти позиционный параметр, принимающий аргумент "1".
+строка:1 знак:1
++ Remove-Item -Path .\Ryzhov.txt $arr1[0]
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Remove-Item], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1.Remove([0])
+строка:1 знак:15
++ $arr1.Remove([0])
++               ~
+Отсутствует имя типа после знака "[".
+
+строка:1 знак:14
++ $arr1.Remove([0])
++              ~
+Отсутствует ")" в вызове метода.
+
+строка:1 знак:14
++ $arr1.Remove([0])
++              ~~~
+Непредвиденная лексема "[0]" в выражении или операторе.
+
+строка:1 знак:17
++ $arr1.Remove([0])
++                 ~
+Непредвиденная лексема ")" в выражении или операторе.
+строка:1 знак:15
++ $arr1.Remove([0])
++               ~
+Отсутствует имя типа после знака "[".
+
+строка:1 знак:14
++ $arr1.Remove([0])
++              ~
+Отсутствует ")" в вызове метода.
+
+строка:1 знак:14
++ $arr1.Remove([0])
++              ~~~
+Непредвиденная лексема "[0]" в выражении или операторе.
+
+строка:1 знак:17
++ $arr1.Remove([0])
++                 ~
+Непредвиденная лексема ")" в выражении или операторе.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1.Remove($arr1[0])
+Исключение при вызове "Remove" с "1" аргументами: "Коллекция имела фиксированный размер."
+строка:1 знак:1
++ $arr1.Remove($arr1[0])
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NotSupportedException
+Исключение при вызове "Remove" с "1" аргументами: "Коллекция имела фиксированный размер."
+строка:1 знак:1
++ $arr1.Remove($arr1[0])
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NotSupportedException
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1.RemoveAt(1)
+Исключение при вызове "RemoveAt" с "1" аргументами: "Коллекция имела фиксированный размер."
+строка:1 знак:1
++ $arr1.RemoveAt(1)
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NotSupportedException
+Исключение при вызове "RemoveAt" с "1" аргументами: "Коллекция имела фиксированный размер."
+строка:1 знак:1
++ $arr1.RemoveAt(1)
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NotSupportedException
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1 | Get-Member
+
+
+   TypeName: System.Int32
+
+Name        MemberType Definition
+----        ---------- ----------
+CompareTo   Method     int CompareTo(System.Object value), int CompareTo(int value), int IComparable.CompareTo(Syste...
+Equals      Method     bool Equals(System.Object obj), bool Equals(int obj), bool IEquatable[int].Equals(int other)
+GetHashCode Method     int GetHashCode()
+GetType     Method     type GetType()
+GetTypeCode Method     System.TypeCode GetTypeCode(), System.TypeCode IConvertible.GetTypeCode()
+ToBoolean   Method     bool IConvertible.ToBoolean(System.IFormatProvider provider)
+ToByte      Method     byte IConvertible.ToByte(System.IFormatProvider provider)
+ToChar      Method     char IConvertible.ToChar(System.IFormatProvider provider)
+ToDateTime  Method     datetime IConvertible.ToDateTime(System.IFormatProvider provider)
+ToDecimal   Method     decimal IConvertible.ToDecimal(System.IFormatProvider provider)
+ToDouble    Method     double IConvertible.ToDouble(System.IFormatProvider provider)
+ToInt16     Method     int16 IConvertible.ToInt16(System.IFormatProvider provider)
+ToInt32     Method     int IConvertible.ToInt32(System.IFormatProvider provider)
+ToInt64     Method     long IConvertible.ToInt64(System.IFormatProvider provider)
+ToSByte     Method     sbyte IConvertible.ToSByte(System.IFormatProvider provider)
+ToSingle    Method     float IConvertible.ToSingle(System.IFormatProvider provider)
+ToString    Method     string ToString(), string ToString(string format), string ToString(System.IFormatProvider pro...
+ToType      Method     System.Object IConvertible.ToType(type conversionType, System.IFormatProvider provider)
+ToUInt16    Method     uint16 IConvertible.ToUInt16(System.IFormatProvider provider)
+ToUInt32    Method     uint32 IConvertible.ToUInt32(System.IFormatProvider provider)
+ToUInt64    Method     uint64 IConvertible.ToUInt64(System.IFormatProvider provider)
+
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1.Remove(1)
+Исключение при вызове "Remove" с "1" аргументами: "Коллекция имела фиксированный размер."
+строка:1 знак:1
++ $arr1.Remove(1)
++ ~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NotSupportedException
+Исключение при вызове "Remove" с "1" аргументами: "Коллекция имела фиксированный размер."
+строка:1 знак:1
++ $arr1.Remove(1)
++ ~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NotSupportedException
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr2 = $arr1 | Where-Object {$_ -ne 1 -}
+строка:1 знак:41
++ $arr2 = $arr1 | Where-Object {$_ -ne 1 -}
++                                         ~
+Необходимо предоставить выражение для значения справа от оператора "-".
+строка:1 знак:41
++ $arr2 = $arr1 | Where-Object {$_ -ne 1 -}
++                                         ~
+Необходимо предоставить выражение для значения справа от оператора "-".
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ExpectedValueExpression
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr2 = $arr1 | Where-Object {$_ -ne 1}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr2
+2
+3
+4
+5
+100
+7
+8
+9
+10
+11
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> foreach ($item in $arr2) {
+Write-Host $item }
+2
+3
+4
+5
+100
+7
+8
+9
+10
+11
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1 + $arr2
+1
+2
+3
+4
+5
+100
+7
+8
+9
+10
+11
+2
+3
+4
+5
+100
+7
+8
+9
+10
+11
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1 * 2
+1
+2
+3
+4
+5
+100
+7
+8
+9
+10
+11
+1
+2
+3
+4
+5
+100
+7
+8
+9
+10
+11
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1 | Sort-Object
+1
+2
+3
+4
+5
+7
+8
+9
+10
+11
+100
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1::Reverse($arr1)
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> arr1
+arr1 : Имя "arr1" не распознано как имя командлета, функции, файла сценария или выполняемой программы. Проверьте правиль
+ность написания имени, а также наличие и правильность пути, после чего повторите попытку.
+строка:1 знак:1
++ arr1
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (arr1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+arr1 : Имя "arr1" не распознано как имя командлета, функции, файла сценария или выполняемой программы. Проверьте правил
+ьность написания имени, а также наличие и правильность пути, после чего повторите попытку.
+строка:1 знак:1
++ arr1
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (arr1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> #arr1
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1
+11
+10
+9
+8
+7
+100
+5
+4
+3
+2
+1
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1::Reverse($arr1)
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1
+1
+2
+3
+4
+5
+100
+7
+8
+9
+10
+11
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1::Reverse($arr1)
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $fruits = @(
+"apple"
+"banana"
+"cherry"
+)
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $fruits[1, 2]
+banana
+cherry
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $fruits[-1]
+cherry
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> [String[]]$colors = "red", "green", "blue"
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $cars = @(
+[PSCustomObject]@{Make = "Heaven"; Model = "Saint"}
+[PSCustomObject]@{Make = "Russia"; Model = "Lada"}
+) 
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $cars
+
+Make   Model
+----   -----
+Heaven Saint
+Russia Lada
+
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1 | Where-Object { $_ % 2 -eq 0 }
+10
+8
+100
+4
+2
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $fruits = $fruits-join", "
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $fruits
+apple, banana, cherry
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $emptyArray = @()
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr1
+11
+10
+9
+8
+7
+100
+5
+4
+3
+2
+1
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr3 = 1,1,1,1,1,1,1,1,1,1
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr3 = $arr1
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> $arr3
+11
+10
+9
+8
+7
+100
+5
+4
+3
+2
+1
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Pr7> Stop-Transcript
+**********************
+Конец записи протокола Windows PowerShell
+Время окончания: 20241022225309
+**********************

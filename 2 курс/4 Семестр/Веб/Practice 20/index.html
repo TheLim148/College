@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice 20</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Список товаров</h1>
+    <button id="addProductBtn">Добавить товар</button>
+    <div id="productList" class="product-list"></div>
+  </div>
+
+  <div id="productModal" class="modal hidden">
+    <div class="modal-content">
+      <div class="close">&times;</div>
+      <h2 id="modalTitle">Добавить товар</h2>
+      <form id="productForm">
+        <input type="text" id="name" placeholder="Название" required />
+        <textarea id="description" placeholder="Описание" required></textarea>
+        <input type="number" id="price" placeholder="Цена" required />
+        <input type="number" id="stock" placeholder="Количество на складе" required />
+        <input type="text" id="type" placeholder="Тип" required />
+        <button type="submit">Сохранить</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+C:\Users\Student\source\repos\Practice 7\bin\Debug\Practice 7.exe.config
+C:\Users\Student\source\repos\Practice 7\bin\Debug\Practice 7.exe
+C:\Users\Student\source\repos\Practice 7\bin\Debug\Practice 7.pdb
+C:\Users\Student\source\repos\Practice 7\obj\Debug\Practice 7.csproj.AssemblyReference.cache
+C:\Users\Student\source\repos\Practice 7\obj\Debug\MainWindow.g.cs
+C:\Users\Student\source\repos\Practice 7\obj\Debug\App.g.cs
+C:\Users\Student\source\repos\Practice 7\obj\Debug\Practice 7_MarkupCompile.cache
+C:\Users\Student\source\repos\Practice 7\obj\Debug\Practice 7_MarkupCompile.lref
+C:\Users\Student\source\repos\Practice 7\obj\Debug\MainWindow.baml
+C:\Users\Student\source\repos\Practice 7\obj\Debug\Practice 7.g.resources
+C:\Users\Student\source\repos\Practice 7\obj\Debug\Practice_7.Properties.Resources.resources
+C:\Users\Student\source\repos\Practice 7\obj\Debug\Practice 7.csproj.GenerateResource.cache
+C:\Users\Student\source\repos\Practice 7\obj\Debug\Practice 7.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\Practice 7\obj\Debug\Practice 7.exe
+C:\Users\Student\source\repos\Practice 7\obj\Debug\Practice 7.pdb
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\Practice 7\bin\Debug\Practice 7.exe.config
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\Practice 7\bin\Debug\Practice 7.exe
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\Practice 7\bin\Debug\Practice 7.pdb
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\Practice 7\obj\Debug\Practice 7.csproj.AssemblyReference.cache
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\Practice 7\obj\Debug\MainWindow.g.cs
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\Practice 7\obj\Debug\App.g.cs
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\Practice 7\obj\Debug\Practice 7_MarkupCompile.cache
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\Practice 7\obj\Debug\Practice 7_MarkupCompile.lref
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\Practice 7\obj\Debug\MainWindow.baml
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\Practice 7\obj\Debug\Practice 7.g.resources
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\Practice 7\obj\Debug\Practice_7.Properties.Resources.resources
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\Practice 7\obj\Debug\Practice 7.csproj.GenerateResource.cache
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\Practice 7\obj\Debug\Practice 7.csproj.CoreCompileInputs.cache
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\Practice 7\obj\Debug\Practice 7.exe
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\Practice 7\obj\Debug\Practice 7.pdb

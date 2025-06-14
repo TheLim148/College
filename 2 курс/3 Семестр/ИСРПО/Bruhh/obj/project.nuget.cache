@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "dfgaUOCZkXo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lima148\\Desktop\\College\\C#\\Bruhh\\Bruhh.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lima148\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Lima148\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Lima148\\.nuget\\packages\\npgsql\\8.0.4\\npgsql.8.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,14 @@
+C:\Users\Lima148\source\repos\Pr10\Pr10\bin\Debug\net8.0\Pr10.exe
+C:\Users\Lima148\source\repos\Pr10\Pr10\bin\Debug\net8.0\Pr10.deps.json
+C:\Users\Lima148\source\repos\Pr10\Pr10\bin\Debug\net8.0\Pr10.runtimeconfig.json
+C:\Users\Lima148\source\repos\Pr10\Pr10\bin\Debug\net8.0\Pr10.dll
+C:\Users\Lima148\source\repos\Pr10\Pr10\bin\Debug\net8.0\Pr10.pdb
+C:\Users\Lima148\source\repos\Pr10\Pr10\obj\Debug\net8.0\Pr10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lima148\source\repos\Pr10\Pr10\obj\Debug\net8.0\Pr10.AssemblyInfoInputs.cache
+C:\Users\Lima148\source\repos\Pr10\Pr10\obj\Debug\net8.0\Pr10.AssemblyInfo.cs
+C:\Users\Lima148\source\repos\Pr10\Pr10\obj\Debug\net8.0\Pr10.csproj.CoreCompileInputs.cache
+C:\Users\Lima148\source\repos\Pr10\Pr10\obj\Debug\net8.0\Pr10.dll
+C:\Users\Lima148\source\repos\Pr10\Pr10\obj\Debug\net8.0\refint\Pr10.dll
+C:\Users\Lima148\source\repos\Pr10\Pr10\obj\Debug\net8.0\Pr10.pdb
+C:\Users\Lima148\source\repos\Pr10\Pr10\obj\Debug\net8.0\Pr10.genruntimeconfig.cache
+C:\Users\Lima148\source\repos\Pr10\Pr10\obj\Debug\net8.0\ref\Pr10.dll

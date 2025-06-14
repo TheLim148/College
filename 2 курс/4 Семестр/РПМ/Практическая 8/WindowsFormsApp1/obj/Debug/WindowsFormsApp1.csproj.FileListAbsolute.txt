@@ -1,0 +1,13 @@
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 8\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 8\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 8\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 8\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 8\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 8\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 8\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 8\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 8\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 8\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 8\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 8\WindowsFormsApp1\bin\Debug\Employee.mdb
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 8\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources

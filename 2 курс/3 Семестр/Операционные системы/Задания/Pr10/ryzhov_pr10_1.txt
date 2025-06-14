@@ -1,0 +1,716 @@
+﻿PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function findMax {
+param($a, $b)
+if($a -gt $b) {
+write-host $a} else {write-host $b}}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> findMax 2 3
+3
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> findMax 3 2
+3
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> findMax 1 1
+1
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function greetWithDefault {
+param($name)
+$time = "day"
+write-host "Hiii, $name. It's $time"
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> greetWithDefault Kostya
+Hiii, Kostya. It's day
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateVolume {
+param($side)
+$side = 1
+write-host $side*$side*$side}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateVolume
+1*1*1
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateVolume {
+param($side)
+[int]$side = 1
+write-host [int]$side*[int]$side*[int]$side}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateVolume
+[int]1*[int]1*[int]1
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateVolume {
+param($side)
+[int]$side = 1
+[int]$result = $side*$side*$side
+write-host ($result)}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateVolume
+1
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateVolume 3
+1
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateVolume {
+param($side)
+[int]$result = $side*$side*$side
+write-host ($result)}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateVolume 3
+27
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateVolume
+0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateVolume {
+param($side = 1)
+[int]$result = $side*$side*$side
+write-host ($result)}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateVolume
+1
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateVolume 3
+27
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function printMessage {
+param($message, $LoI = "information")
+write-host ($message + " " + $information
+})
+строка:3 знак:42
++ write-host ($message + " " + $information
++                                          ~
+Отсутствует закрывающий знак ")" в выражении.
+
+строка:4 знак:2
++ })
++  ~
+Непредвиденная лексема ")" в выражении или операторе.
+строка:3 знак:42
++ write-host ($message + " " + $information
++                                          ~
+Отсутствует закрывающий знак ")" в выражении.
+
+строка:4 знак:2
++ })
++  ~
+Непредвиденная лексема ")" в выражении или операторе.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingEndParenthesisInExpression
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function printMessage {
+param($message, $LoI = "information")
+write-host ($message + " " + $information)}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> printMessage message
+message
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function printMessage {
+param($message, $LoI = "information")
+write-host ($message + " " + $LoI)}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> printMessage message
+message information
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> printMessage
+ information
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function convertToCelsius {
+param($degrees = 32)
+$result = ([int]$degrees - 32)*(5/9)
+write-host $result}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> convertToCelsius
+0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> convertToCelsius 32
+0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> convertToCelsius 100
+37,7777777777778
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> convertToCelsius 198
+92,2222222222222
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> convertToCelsius 98
+36,6666666666667
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function convertToFahrenheit {
+param($degrees = 0)
+$result = ((9/5)*[int]$degrees) + 32
+write-host $result}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> convertToFahrenheit
+32
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> convertToFahrenheit 100
+212
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> convertToFahrenheit -273
+-459,4
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> convertToFahrenheit 0
+32
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> convertToFahrenheit 36
+96,8
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> 36,6
+36
+6
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> 36.6
+36,6
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> convertToFahrenheit 36.6
+98,6
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateAverage {
+param($array)
+[int]$sum = 0
+foreach($elements in $array) {
+$sum += [int]$elements
+}
+$average = $sum/$array.Length
+write-host $average}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $array = 1, 2, 3, 42, 5, 6, 7, 5
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateAverage $array
+8,875
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateAverage $array
+8,875
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function findMaxInArray {
+$max = -1000000
+foreach($elements in $array) {
+if($max -lt $elements) {
+$max = $elements}
+}
+write-host $max}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> findMaxInArray $array
+42
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> findMaxInArray $array
+42
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function findMinInArray {
+$min = 1000000
+foreach($elements in $array) {
+if($min -gt $elements) {
+$min = $elements}
+}
+write-host $min}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> findMinInArray $array
+1
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function countElements {
+param($array)
+write-host $array.Length}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> countElements $array
+8
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> countElements 
+0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> findMinInArray 
+1
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function findMinInArray {
+param($array)
+$min = 1000000
+foreach($elements in $array) {
+if($min -gt $elements) {
+$min = $elements}
+}
+write-host $min}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> findMinInArray 
+1000000
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function findMaxInArray {
+param($array)
+$max = -1000000
+foreach($elements in $array) {
+if($max -lt $elements) {
+$max = $elements}
+}
+write-host $max}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function filterEvenNumbers {
+param($array)
+foreach($elements in $array) {
+if($elements % 2 -eq 0) {
+$evenarray = 0, 0
+$evenarray += $elements}
+}
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function filterEvenNumbers {
+param($array)
+foreach($elements in $array) {
+if($elements % 2 -eq 0) {
+$evenarray = 0, 0
+$evenarray += $elements}
+}
+write-host $evenarray
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> filterEvenNumbers
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> filterEvenNumbers $array
+0 0 6
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> filterEvenNumbers $array
+0 0 6
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function filterEvenNumbers {
+param($array)
+foreach($elements in $array) {
+if($elements % 2 -eq 0) {
+$evenarray += $elements}
+}
+write-host $evenarray
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> filterEvenNumbers $array
+50
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> filterEvenNumbers $array
+50
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function filterEvenNumbers {
+param($array)
+foreach($elements in $array) {
+if($elements % 2 -eq 0) {
+$evenarray = @()
+$evenarray += $elements}
+}
+write-host $evenarray
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> filterEvenNumbers $array
+6
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> filterEvenNumbers $array
+6
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function filterEvenNumbers {
+param($array)
+foreach($elements in $array) {
+if($elements % 2 -eq 0) {
+$evenarray = @()
+$evenarray.Add($elements)}
+}
+write-host $evenarray
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> filterEvenNumbers $array
+Исключение при вызове "Add" с "1" аргументами: "Коллекция имела фиксированный размер."
+строка:6 знак:1
++ $evenarray.Add($elements)}
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NotSupportedException
+Исключение при вызове "Add" с "1" аргументами: "Коллекция имела фиксированный размер."
+строка:6 знак:1
++ $evenarray.Add($elements)}
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NotSupportedException
+
+Исключение при вызове "Add" с "1" аргументами: "Коллекция имела фиксированный размер."
+строка:6 знак:1
++ $evenarray.Add($elements)}
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NotSupportedException
+Исключение при вызове "Add" с "1" аргументами: "Коллекция имела фиксированный размер."
+строка:6 знак:1
++ $evenarray.Add($elements)}
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NotSupportedException
+
+Исключение при вызове "Add" с "1" аргументами: "Коллекция имела фиксированный размер."
+строка:6 знак:1
++ $evenarray.Add($elements)}
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NotSupportedException
+Исключение при вызове "Add" с "1" аргументами: "Коллекция имела фиксированный размер."
+строка:6 знак:1
++ $evenarray.Add($elements)}
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NotSupportedException
+
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function filterEvenNumbers {
+param($array)
+foreach($elements in $array) {
+if($elements % 2 -eq 0) {
+$evenarray = @()
+$evenarray += $elements}
+}
+write-host $evenarray
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> filterEvenNumbers $array
+6
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function filterEvenNumbers {
+param($array)
+foreach($elements in $array) {
+if($elements % 2 -eq 0) {
+$evenarray = @( ... )
+$evenarray += $elements}
+}
+write-host $evenarray
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> filterEvenNumbers $array
+... : Имя "..." не распознано как имя командлета, функции, файла сценария или выполняемой программы. Проверьте правильно
+сть написания имени, а также наличие и правильность пути, после чего повторите попытку.
+строка:5 знак:17
++ $evenarray = @( ... )
++                 ~~~
+    + CategoryInfo          : ObjectNotFound: (...:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+... : Имя "..." не распознано как имя командлета, функции, файла сценария или выполняемой программы. Проверьте правильн
+ость написания имени, а также наличие и правильность пути, после чего повторите попытку.
+строка:5 знак:17
++ $evenarray = @( ... )
++                 ~~~
+    + CategoryInfo          : ObjectNotFound: (...:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+... : Имя "..." не распознано как имя командлета, функции, файла сценария или выполняемой программы. Проверьте правильно
+сть написания имени, а также наличие и правильность пути, после чего повторите попытку.
+строка:5 знак:17
++ $evenarray = @( ... )
++                 ~~~
+    + CategoryInfo          : ObjectNotFound: (...:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+... : Имя "..." не распознано как имя командлета, функции, файла сценария или выполняемой программы. Проверьте правильн
+ость написания имени, а также наличие и правильность пути, после чего повторите попытку.
+строка:5 знак:17
++ $evenarray = @( ... )
++                 ~~~
+    + CategoryInfo          : ObjectNotFound: (...:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+... : Имя "..." не распознано как имя командлета, функции, файла сценария или выполняемой программы. Проверьте правильно
+сть написания имени, а также наличие и правильность пути, после чего повторите попытку.
+строка:5 знак:17
++ $evenarray = @( ... )
++                 ~~~
+    + CategoryInfo          : ObjectNotFound: (...:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+... : Имя "..." не распознано как имя командлета, функции, файла сценария или выполняемой программы. Проверьте правильн
+ость написания имени, а также наличие и правильность пути, после чего повторите попытку.
+строка:5 знак:17
++ $evenarray = @( ... )
++                 ~~~
+    + CategoryInfo          : ObjectNotFound: (...:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+6
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function filterEvenNumbers {
+param($array)
+foreach($elements in $array) {
+if($elements % 2 -eq 0) {
+$evenarray += $elements}
+}
+write-host $evenarray
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $evenarray = @()
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> filterEvenNumbers $array
+50
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $evenarray = @(0, )
+строка:1 знак:18
++ $evenarray = @(0, )
++                  ~
+Отсутствует выражение после ",".
+строка:1 знак:18
++ $evenarray = @(0, )
++                  ~
+Отсутствует выражение после ",".
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingExpressionAfterToken
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $evenarray = @(0, 0)
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> filterEvenNumbers $array
+50
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $evenarray
+0
+0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function filterEvenNumbers {
+param($array)
+foreach($elements in $array) {
+if($elements % 2 -eq 0) {
+$evenarray += [string]$elements}
+}
+write-host $evenarray
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> filterEvenNumbers $array
+2426
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $evenarray = 0, 0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> filterEvenNumbers $array
+2426
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $evenarray
+0
+0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateFactorial {
+param($number)
+for($i = 0; $i -lt $number; $i++){
+$result *= $number
+$number -= 1}
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateFactorial 5
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateFactorial {
+param($number)
+for($i = 0; $i -lt $number; $i++){
+$result *= $number
+$number -= 1}
+write-host $result
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateFactorial 5
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateFactorial {
+param($number)
+for($i = 1; $i -le $number; $i++){
+$result *= $number
+$number -= 1}
+write-host $result
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateFactorial 5
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateFactorial {
+param($number)
+for($i = 1; $i -lt $number; $i++){
+$result *= $number
+$number -= 1}
+write-host $result
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateFactorial 5
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateFactorial 
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateFactorial 14
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateFactorial {
+param($number)
+for($i = 1; $i -lt $number; $i++){
+[int]$result *= $number
+[int]$number -= 1}
+write-host $result
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateFactorial 14
+0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateFactorial 5
+0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateFactorial {
+param($number)
+if($number -le 1){
+return 1} else {
+return($number*calculateFactorial $number-1)}
+строка:5 знак:16
++ return($number*calculateFactorial $number-1)}
++                ~
+Необходимо предоставить выражение для значения справа от оператора "*".
+
+строка:5 знак:16
++ return($number*calculateFactorial $number-1)}
++                ~~~~~~~~~~~~~~~~~~
+Непредвиденная лексема "calculateFactorial" в выражении или операторе.
+
+строка:5 знак:16
++ return($number*calculateFactorial $number-1)}
++                ~
+Отсутствует закрывающий знак ")" в выражении.
+
+строка:4 знак:16
++ return 1} else {
++                ~
+Отсутствует закрывающий знак "}" в блоке операторов или определении типа.
+
+строка:1 знак:29
++ function calculateFactorial {
++                             ~
+Отсутствует закрывающий знак "}" в блоке операторов или определении типа.
+
+строка:5 знак:44
++ return($number*calculateFactorial $number-1)}
++                                            ~
+Непредвиденная лексема ")" в выражении или операторе.
+
+строка:5 знак:45
++ return($number*calculateFactorial $number-1)}
++                                             ~
+Непредвиденная лексема "}" в выражении или операторе.
+строка:5 знак:16
++ return($number*calculateFactorial $number-1)}
++                ~
+Необходимо предоставить выражение для значения справа от оператора "*".
+
+строка:5 знак:16
++ return($number*calculateFactorial $number-1)}
++                ~~~~~~~~~~~~~~~~~~
+Непредвиденная лексема "calculateFactorial" в выражении или операторе.
+
+строка:5 знак:16
++ return($number*calculateFactorial $number-1)}
++                ~
+Отсутствует закрывающий знак ")" в выражении.
+
+строка:4 знак:16
++ return 1} else {
++                ~
+Отсутствует закрывающий знак "}" в блоке операторов или определении типа.
+
+строка:1 знак:29
++ function calculateFactorial {
++                             ~
+Отсутствует закрывающий знак "}" в блоке операторов или определении типа.
+
+строка:5 знак:44
++ return($number*calculateFactorial $number-1)}
++                                            ~
+Непредвиденная лексема ")" в выражении или операторе.
+
+строка:5 знак:45
++ return($number*calculateFactorial $number-1)}
++                                             ~
+Непредвиденная лексема "}" в выражении или операторе.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ExpectedValueExpression
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateFactorial {
+param($number)
+for($i = 1; $i -lt $number; $i++){
+[int]$result *= $number
+[int]$number -= 1}
+write-host $result
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateFactorial {
+param($number)
+for($i = 1; $i -lt $number; $i++){
+[int]$result *= [int]$number
+[int]$number -= 1}
+write-host $result
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateFactorial 5
+0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateFactorial {
+param($number)
+$result = 1
+for($i = 1; $i -lt $number; $i++){
+[int]$result *= $number
+[int]$number -= 1}
+write-host $result
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateFactorial 5
+20
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateFactorial {
+param($number)
+$result = 1
+for($i = 0; $i -lt $number; $i++){
+[int]$result *= $number
+[int]$number -= 1}
+write-host $result
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateFactorial 5
+60
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateFactorial {
+param($number)
+$result = 1
+for($i = 0; $i -le $number; $i++){
+[int]$result *= $number
+[int]$number -= 1}
+write-host $result
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateFactorial 5
+60
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateFactorial {
+param($number)
+$number1 = $number
+$result = 1
+for($i = 0; $i -le $number; $i++){
+[int]$result *= $number1
+[int]$number1 -= 1}
+write-host $result
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateFactorial 5
+0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateFactorial {
+param($number)
+$number1 = $number
+$result = 1
+for($i = 1; $i -le $number; $i++){
+[int]$result *= $number1
+[int]$number1 -= 1}
+write-host $result
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateFactorial 5
+120
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateFactorial 4
+24
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateFactorial 14
+Не удается преобразовать значение "3632428800" в тип "System.Int32". Ошибка: "Значение было недопустимо малым или недопу
+стимо большим для Int32."
+строка:6 знак:1
++ [int]$result *= $number1
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : MetadataError: (:) [], ArgumentTransformationMetadataException
+    + FullyQualifiedErrorId : RuntimeException
+Не удается преобразовать значение "3632428800" в тип "System.Int32". Ошибка: "Значение было недопустимо малым или недоп
+устимо большим для Int32."
+строка:6 знак:1
++ [int]$result *= $number1
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : MetadataError: (:) [], ArgumentTransformationMetadataException
+    + FullyQualifiedErrorId : RuntimeException
+
+Не удается преобразовать значение "2905943040" в тип "System.Int32". Ошибка: "Значение было недопустимо малым или недопу
+стимо большим для Int32."
+строка:6 знак:1
++ [int]$result *= $number1
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : MetadataError: (:) [], ArgumentTransformationMetadataException
+    + FullyQualifiedErrorId : RuntimeException
+Не удается преобразовать значение "2905943040" в тип "System.Int32". Ошибка: "Значение было недопустимо малым или недоп
+устимо большим для Int32."
+строка:6 знак:1
++ [int]$result *= $number1
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : MetadataError: (:) [], ArgumentTransformationMetadataException
+    + FullyQualifiedErrorId : RuntimeException
+
+Не удается преобразовать значение "2179457280" в тип "System.Int32". Ошибка: "Значение было недопустимо малым или недопу
+стимо большим для Int32."
+строка:6 знак:1
++ [int]$result *= $number1
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : MetadataError: (:) [], ArgumentTransformationMetadataException
+    + FullyQualifiedErrorId : RuntimeException
+Не удается преобразовать значение "2179457280" в тип "System.Int32". Ошибка: "Значение было недопустимо малым или недоп
+устимо большим для Int32."
+строка:6 знак:1
++ [int]$result *= $number1
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : MetadataError: (:) [], ArgumentTransformationMetadataException
+    + FullyQualifiedErrorId : RuntimeException
+
+1452971520
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateFactorial 6
+720
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function generateRandomNumber {
+param($a, $b)
+if($a -lt $b) {
+write-host "error"
+break} else {
+wrtie-host (Get-Random -Minimum $a -Maximum $b)}
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> TerminatingError(TabExpansion2): "Не удается привязать аргумент к параметру "inputScript", так как он представляет собой пустую строку."
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> generateRandomNumber
+wrtie-host : Имя "wrtie-host" не распознано как имя командлета, функции, файла сценария или выполняемой программы. Прове
+рьте правильность написания имени, а также наличие и правильность пути, после чего повторите попытку.
+строка:6 знак:1
++ wrtie-host (Get-Random -Minimum $a -Maximum $b)}
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (wrtie-host:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+wrtie-host : Имя "wrtie-host" не распознано как имя командлета, функции, файла сценария или выполняемой программы. Пров
+ерьте правильность написания имени, а также наличие и правильность пути, после чего повторите попытку.
+строка:6 знак:1
++ wrtie-host (Get-Random -Minimum $a -Maximum $b)}
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (wrtie-host:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function generateRandomNumber {
+param($a, $b)
+if($a -lt $b) {
+write-host "error"
+break} else {
+write-host (Get-Random -Minimum $a -Maximum $b)}
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> generateRandomNumber
+1736690499
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> generateRandomNumber 1 10
+error
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> generateRandomNumber 10 1
+>> TerminatingError(Get-Random): "Значение Minimum (10) не может быть больше или равно значению Maximum (1)."
+Get-Random : Значение Minimum (10) не может быть больше или равно значению Maximum (1).
+строка:6 знак:13
++ write-host (Get-Random -Minimum $a -Maximum $b)}
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Random], ArgumentException
+    + FullyQualifiedErrorId : MinGreaterThanOrEqualMax,Microsoft.PowerShell.Commands.GetRandomCommand
+Get-Random : Значение Minimum (10) не может быть больше или равно значению Maximum (1).
+строка:6 знак:13
++ write-host (Get-Random -Minimum $a -Maximum $b)}
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Random], ArgumentException
+    + FullyQualifiedErrorId : MinGreaterThanOrEqualMax,Microsoft.PowerShell.Commands.GetRandomCommand
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function generateRandomNumber {
+param($a, $b)
+if($a -gt $b) {
+write-host "error"
+break} else {
+write-host (Get-Random -Minimum $a -Maximum $b)}
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> generateRandomNumber 1 10
+1
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> generateRandomNumber 1 10
+4
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> generateRandomNumber 1 10
+4
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> generateRandomNumber 1 10
+7
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> generateRandomNumber 1 10
+4
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> generateRandomNumber 1 1000
+545
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function reverseString{
+param($string)
+$string[-1..-($string.Length)] -join ''
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> reverseString "powershell"
+llehsrewop
+

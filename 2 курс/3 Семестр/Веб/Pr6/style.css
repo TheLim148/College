@@ -1,0 +1,124 @@
+*{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: auto;
+}
+
+.bg {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    background-color: white;
+    border: solid;
+    border-color:darkgrey;
+    border-width: 2px;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: black;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: cornflowerblue;
+}
+
+ul li {
+    list-style:none;
+}
+
+button {
+    font-size: 20px;
+    width: 125px;
+    height: 50px;
+    border-radius: 5px;
+    background-color:crimson;
+    color: white;
+}
+
+.logo {
+    margin: 10px;
+}
+
+.bg_text {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    font-size: 24px;
+}
+
+.bottom_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+    height: 30%;
+    margin: 10%;
+    margin-left: 20%;
+    margin-top: 5%;
+    box-shadow: 1px 1px 5px 1px;
+    font-size: 24px;
+    border-radius: 5px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.colortext {
+    color: crimson;
+}
+
+.business {
+    display: flex;
+    font-size: 40px;
+    padding: 0 43%;
+    text-align: center;
+}
+
+.container {
+    padding: 3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container div img {
+    width: 850px;
+    border: 1px solid;
+}
+
+.container div p {
+    position: absolute;
+    font-size: 24px;
+    top: auto;
+    color: white;
+    background-color: rgba(0, 0, 0,0.7);
+    text-align: left;
+    box-sizing: border-box;
+    width: 46.4%;
+    padding: 20px;
+    margin-top: 293px;
+}
+

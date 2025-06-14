@@ -1,0 +1,20 @@
+C:\Users\Student\source\repos\Tables\bin\Debug\Tables.exe.config
+C:\Users\Student\source\repos\Tables\bin\Debug\Tables.exe
+C:\Users\Student\source\repos\Tables\bin\Debug\Tables.pdb
+C:\Users\Student\source\repos\Tables\obj\Debug\Tables.csproj.AssemblyReference.cache
+C:\Users\Student\source\repos\Tables\obj\Debug\Tables.Form1.resources
+C:\Users\Student\source\repos\Tables\obj\Debug\Tables.Properties.Resources.resources
+C:\Users\Student\source\repos\Tables\obj\Debug\Tables.csproj.GenerateResource.cache
+C:\Users\Student\source\repos\Tables\obj\Debug\Tables.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\Tables\obj\Debug\Tables.exe
+C:\Users\Student\source\repos\Tables\obj\Debug\Tables.pdb
+C:\Users\Lima148\Desktop\Practice 5\Tables\bin\Debug\Tables.exe.config
+C:\Users\Lima148\Desktop\Practice 5\Tables\bin\Debug\Tables.exe
+C:\Users\Lima148\Desktop\Practice 5\Tables\bin\Debug\Tables.pdb
+C:\Users\Lima148\Desktop\Practice 5\Tables\obj\Debug\Tables.csproj.AssemblyReference.cache
+C:\Users\Lima148\Desktop\Practice 5\Tables\obj\Debug\Tables.Form1.resources
+C:\Users\Lima148\Desktop\Practice 5\Tables\obj\Debug\Tables.Properties.Resources.resources
+C:\Users\Lima148\Desktop\Practice 5\Tables\obj\Debug\Tables.csproj.GenerateResource.cache
+C:\Users\Lima148\Desktop\Practice 5\Tables\obj\Debug\Tables.csproj.CoreCompileInputs.cache
+C:\Users\Lima148\Desktop\Practice 5\Tables\obj\Debug\Tables.exe
+C:\Users\Lima148\Desktop\Practice 5\Tables\obj\Debug\Tables.pdb

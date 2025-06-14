@@ -1,0 +1,30 @@
+C:\Users\Student\source\repos\WpfApp10\obj\Debug\WpfApp10.csproj.AssemblyReference.cache
+C:\Users\Student\source\repos\WpfApp10\obj\Debug\App.g.cs
+C:\Users\Student\source\repos\WpfApp10\obj\Debug\WpfApp10_MarkupCompile.cache
+C:\Users\Student\source\repos\WpfApp10\obj\Debug\MainWindow.g.cs
+C:\Users\Student\source\repos\WpfApp10\obj\Debug\WpfApp10_MarkupCompile.lref
+C:\Users\Student\source\repos\WpfApp10\bin\Debug\WpfApp10.exe.config
+C:\Users\Student\source\repos\WpfApp10\bin\Debug\WpfApp10.exe
+C:\Users\Student\source\repos\WpfApp10\bin\Debug\WpfApp10.pdb
+C:\Users\Student\source\repos\WpfApp10\obj\Debug\MainWindow.baml
+C:\Users\Student\source\repos\WpfApp10\obj\Debug\WpfApp10.g.resources
+C:\Users\Student\source\repos\WpfApp10\obj\Debug\WpfApp10.Properties.Resources.resources
+C:\Users\Student\source\repos\WpfApp10\obj\Debug\WpfApp10.csproj.GenerateResource.cache
+C:\Users\Student\source\repos\WpfApp10\obj\Debug\WpfApp10.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\WpfApp10\obj\Debug\WpfApp10.exe
+C:\Users\Student\source\repos\WpfApp10\obj\Debug\WpfApp10.pdb
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\WpfApp10\bin\Debug\WpfApp10.exe.config
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\WpfApp10\bin\Debug\WpfApp10.exe
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\WpfApp10\bin\Debug\WpfApp10.pdb
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\WpfApp10\obj\Debug\WpfApp10.csproj.AssemblyReference.cache
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\WpfApp10\obj\Debug\MainWindow.g.cs
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\WpfApp10\obj\Debug\App.g.cs
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\WpfApp10\obj\Debug\WpfApp10_MarkupCompile.cache
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\WpfApp10\obj\Debug\WpfApp10_MarkupCompile.lref
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\WpfApp10\obj\Debug\MainWindow.baml
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\WpfApp10\obj\Debug\WpfApp10.g.resources
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\WpfApp10\obj\Debug\WpfApp10.Properties.Resources.resources
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\WpfApp10\obj\Debug\WpfApp10.csproj.GenerateResource.cache
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\WpfApp10\obj\Debug\WpfApp10.csproj.CoreCompileInputs.cache
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\WpfApp10\obj\Debug\WpfApp10.exe
+C:\Users\Lima148\Desktop\College\4 Семестр\РПМ\Практическая 7\WpfApp10\obj\Debug\WpfApp10.pdb

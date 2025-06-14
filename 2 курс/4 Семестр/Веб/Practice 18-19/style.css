@@ -1,0 +1,435 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(Montserrat-Regular.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.head {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.main_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "l_panel r_panel"
+    "RWs r_panel"
+    "top_sellers top_sellers"
+    "trending trending";
+}
+
+.star {
+    height: 17px;
+    width: 17px;
+}
+
+.price_name {
+    font-size: 21px;
+}
+
+.price_review {
+    font-size: 11px;
+    color: #888888;
+}
+
+.price_money {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.circle1 {
+    position: absolute;
+    display: flex;
+    margin-left: 145px;
+    height: 100px;
+    width: 100px;
+    background-color: #10B981;
+    color: white;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle2 {
+    position: absolute;
+    display: flex;
+    margin-left: 145px;
+    height: 100px;
+    width: 100px;
+    background-color: #845EC2;
+    color: white;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle3 {
+    position: absolute;
+    display: flex;
+    margin-left: 145px;
+    height: 100px;
+    width: 100px;
+    background-color: #08BDBE;
+    color: white;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_sells h1 {
+    margin-left: 50px;
+}
+
+.trending h1 {
+    margin-left: 35px;
+}
+
+.header_sells {
+    grid-area: top_sells;
+    margin-left: 355px;
+    align-items: center;
+}
+
+.trending {
+    grid-area: trending;
+    margin-left: 300px;
+    margin-top: 70px;
+    align-items: center;
+}
+
+.TopPicks {
+    font-size: 26px;
+    color: white;
+    border: none;
+    text-decoration: none;
+    background-color: #10B981;
+    border-radius: 55%;
+    padding: 15px;
+}
+
+.Watches {
+    font-size: 26px;
+    color: black;
+    border: none;
+    text-decoration: none;
+    background-color: white;
+    padding: 15px;
+}
+
+.Earbuds {
+    margin-left: 10px;
+    font-size: 26px;
+    font-size: 26px;
+    color: white;
+    border: none;
+    text-decoration: none;
+    background-color: #10B981;
+    border-radius: 55%;
+    padding: 15px;
+}
+
+.Wireless {
+    font-size: 26px;
+    font-size: 26px;
+    color: black;
+    border: none;
+    text-decoration: none;
+    background-color: white;
+    padding: 15px;
+}
+
+.Wired {
+    font-size: 26px;
+    font-size: 26px;
+    color: black;
+    border: none;
+    text-decoration: none;
+    background-color: white;
+    padding: 15px;
+}
+
+.add_button {
+    border: none;
+    text-decoration: none;
+    background-color: #10B981;
+    color: white;
+    border-radius: 10px;
+    font-size: 26px;
+    padding: 10px;
+    padding-left: 63px;
+    padding-right: 63px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+.top_sellers {
+    grid-area: top_sellers;
+    display: grid;
+    justify-content: center;
+    height: 541px;
+    grid-template-areas:
+    "top_sells top_sells top_sells"
+    "first_item second_item third_item";
+}
+
+.trending_earphones {
+    grid-area: trending;
+    display: grid;
+    justify-content: center;
+    height: 541px;
+    grid-template-areas:
+    "trending trending trending"
+    "first_item second_item third_item";
+}
+
+.first_item_1 {
+    display: flex;
+    flex-direction: column;
+    grid-area: first_item;
+    margin: 25px;
+    padding: 15px;
+    background-color: #ECFEF4;
+    border-radius: 15px;
+}
+
+.second_item_1 {
+    display: flex;
+    flex-direction: column;
+    grid-area: second_item;
+    margin: 25px;
+    padding: 15px;
+    background-color: #C9F2FF;
+    border-radius: 15px;
+}
+
+.third_item_1 {
+    display: flex;
+    flex-direction: column;
+    grid-area: third_item;
+    margin: 25px;
+    padding: 15px;
+    background-color: #E5D5FF;
+    border-radius: 15px;
+}
+
+.first_item_2 {
+    display: flex;
+    flex-direction: column;
+    grid-area: first_item;
+    margin: 25px;
+    padding: 15px;
+    background-color: #E0EFFF;
+    border-radius: 15px;
+}
+
+.second_item_2 {
+    display: flex;
+    flex-direction: column;
+    grid-area: second_item;
+    margin: 25px;
+    padding: 15px;
+    background-color: #E8F9FF;
+    border-radius: 15px;
+}
+
+.third_item_2 {
+    display: flex;
+    flex-direction: column;
+    grid-area: third_item;
+    margin: 25px;
+    padding: 15px;
+    background-color: #D3FBFB;
+    border-radius: 15px;
+}
+
+#headphones {
+    height: 241px;
+    width: 241px;
+}
+
+.left_panel {
+    grid-area: l_panel;
+    background-color: white;
+}
+
+.left_panel h1 {
+    font-size: 64px;
+    font-weight: bold;
+    margin-top: 150px;
+    margin-left: 60px;
+}
+
+.left_panel p {
+    font-size: 21px;
+    margin-left: 60px;
+    margin-top: 40px;
+}
+
+#buy_now {
+    border: none;
+    text-decoration: none;
+    background-color: #10B981;
+    color: white;
+    border-radius: 10px;
+    font-size: 26px;
+    padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-left: 60px;
+    margin-top: 40px;
+}
+
+#man {
+    width: 69px;
+    height: 69px;
+    border-radius: 100%;
+}
+
+#red_beats {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+.man_with_headphones p {
+    font-size: 21px;   
+}
+
+#red_headphones {
+    width: 280px;
+    height: auto;
+}
+
+.red_headphones {
+    display: flex;
+    flex-direction: column;
+    width: 272px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #ECFEF4;
+    border-radius: 136px;
+    align-items: center;
+    
+    margin-left: 250px;
+}
+
+.red_headphones p {
+    font-size: 31px;
+    font-weight: bold;
+}
+
+.reviews {
+    display: flex;
+    align-items: flex-end;
+    grid-area: RWs;
+    background-color: white;
+    margin-bottom: 400px;
+    margin-left: 150px;
+}
+
+.reviews p {
+    font-size: 26px;
+}
+
+#reviews_ppl {
+    height: 60px;
+    width: auto;
+}
+
+.right_panel {
+    /* display: flex; */
+    /* flex-direction: row; */
+    grid-area: r_panel;
+    background-color: white;
+}
+
+.head_buttons {
+    justify-content: right;
+}
+
+.search_input {
+    border: 1px solid #DDDE;
+    border-radius: 5px;
+    padding: 4px;
+    background-color: white;
+    height: 40px;
+    font-size: 16px;
+}
+
+.loupe_icon {
+    width: 47px;
+    height: 47px;
+    background-color: #10B981;
+    border: 1px solid #10B981;
+    border-radius: 7px;
+    margin-left: 10px;
+}
+
+.down_panel {
+    display: flex;
+    background-color: #10B981;
+    justify-content: space-around;
+    padding-left: 400px;
+    padding-right: 400px;
+}
+
+.down_panel a {
+    background-color: #10B981;
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.down_panel a:hover {
+    color:aquamarine;
+}
+
+.cart_button {
+    border: 1px solid #10B981;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    font-size: 16px;
+    margin-left: 40px;   
+}
+
+.login_button {
+    border: 1px solid #10B981;
+    border-radius: 30px;
+    background-color: #10B981;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    padding: 10px;
+    padding-right: 800px;
+    width: 80px;
+    height: auto;
+}

@@ -1,0 +1,14 @@
+C:\Users\Lima148\source\repos\Practice 4\Practice 4\bin\Debug\Practice 4.exe.config
+C:\Users\Lima148\source\repos\Practice 4\Practice 4\bin\Debug\Practice 4.exe
+C:\Users\Lima148\source\repos\Practice 4\Practice 4\bin\Debug\Practice 4.pdb
+C:\Users\Lima148\source\repos\Practice 4\Practice 4\obj\Debug\Practice 4.csproj.AssemblyReference.cache
+C:\Users\Lima148\source\repos\Practice 4\Practice 4\obj\Debug\Practice 4.csproj.CoreCompileInputs.cache
+C:\Users\Lima148\source\repos\Practice 4\Practice 4\obj\Debug\Practice 4.exe
+C:\Users\Lima148\source\repos\Practice 4\Practice 4\obj\Debug\Practice 4.pdb
+C:\Users\Lima148\Desktop\College\4 Семестр\Разработка программных модулей\Практическая 4\Practice 4\Practice 4\bin\Debug\Practice 4.exe.config
+C:\Users\Lima148\Desktop\College\4 Семестр\Разработка программных модулей\Практическая 4\Practice 4\Practice 4\bin\Debug\Practice 4.exe
+C:\Users\Lima148\Desktop\College\4 Семестр\Разработка программных модулей\Практическая 4\Practice 4\Practice 4\bin\Debug\Practice 4.pdb
+C:\Users\Lima148\Desktop\College\4 Семестр\Разработка программных модулей\Практическая 4\Practice 4\Practice 4\obj\Debug\Practice 4.csproj.AssemblyReference.cache
+C:\Users\Lima148\Desktop\College\4 Семестр\Разработка программных модулей\Практическая 4\Practice 4\Practice 4\obj\Debug\Practice 4.csproj.CoreCompileInputs.cache
+C:\Users\Lima148\Desktop\College\4 Семестр\Разработка программных модулей\Практическая 4\Practice 4\Practice 4\obj\Debug\Practice 4.exe
+C:\Users\Lima148\Desktop\College\4 Семестр\Разработка программных модулей\Практическая 4\Practice 4\Practice 4\obj\Debug\Practice 4.pdb

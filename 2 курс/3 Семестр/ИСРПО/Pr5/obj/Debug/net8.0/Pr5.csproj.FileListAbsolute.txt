@@ -1,0 +1,28 @@
+/home/student/Документы/3992 Ryzhov_Kostya/Pr5/bin/Debug/net8.0/Pr5
+/home/student/Документы/3992 Ryzhov_Kostya/Pr5/bin/Debug/net8.0/Pr5.deps.json
+/home/student/Документы/3992 Ryzhov_Kostya/Pr5/bin/Debug/net8.0/Pr5.runtimeconfig.json
+/home/student/Документы/3992 Ryzhov_Kostya/Pr5/bin/Debug/net8.0/Pr5.dll
+/home/student/Документы/3992 Ryzhov_Kostya/Pr5/bin/Debug/net8.0/Pr5.pdb
+/home/student/Документы/3992 Ryzhov_Kostya/Pr5/obj/Debug/net8.0/Pr5.GeneratedMSBuildEditorConfig.editorconfig
+/home/student/Документы/3992 Ryzhov_Kostya/Pr5/obj/Debug/net8.0/Pr5.AssemblyInfoInputs.cache
+/home/student/Документы/3992 Ryzhov_Kostya/Pr5/obj/Debug/net8.0/Pr5.AssemblyInfo.cs
+/home/student/Документы/3992 Ryzhov_Kostya/Pr5/obj/Debug/net8.0/Pr5.csproj.CoreCompileInputs.cache
+/home/student/Документы/3992 Ryzhov_Kostya/Pr5/obj/Debug/net8.0/Pr5.dll
+/home/student/Документы/3992 Ryzhov_Kostya/Pr5/obj/Debug/net8.0/refint/Pr5.dll
+/home/student/Документы/3992 Ryzhov_Kostya/Pr5/obj/Debug/net8.0/Pr5.pdb
+/home/student/Документы/3992 Ryzhov_Kostya/Pr5/obj/Debug/net8.0/Pr5.genruntimeconfig.cache
+/home/student/Документы/3992 Ryzhov_Kostya/Pr5/obj/Debug/net8.0/ref/Pr5.dll
+C:\Users\Lima148\Desktop\College\C#\Pr5\bin\Debug\net8.0\Pr5.exe
+C:\Users\Lima148\Desktop\College\C#\Pr5\bin\Debug\net8.0\Pr5.deps.json
+C:\Users\Lima148\Desktop\College\C#\Pr5\bin\Debug\net8.0\Pr5.runtimeconfig.json
+C:\Users\Lima148\Desktop\College\C#\Pr5\bin\Debug\net8.0\Pr5.dll
+C:\Users\Lima148\Desktop\College\C#\Pr5\bin\Debug\net8.0\Pr5.pdb
+C:\Users\Lima148\Desktop\College\C#\Pr5\obj\Debug\net8.0\Pr5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lima148\Desktop\College\C#\Pr5\obj\Debug\net8.0\Pr5.AssemblyInfoInputs.cache
+C:\Users\Lima148\Desktop\College\C#\Pr5\obj\Debug\net8.0\Pr5.AssemblyInfo.cs
+C:\Users\Lima148\Desktop\College\C#\Pr5\obj\Debug\net8.0\Pr5.csproj.CoreCompileInputs.cache
+C:\Users\Lima148\Desktop\College\C#\Pr5\obj\Debug\net8.0\Pr5.dll
+C:\Users\Lima148\Desktop\College\C#\Pr5\obj\Debug\net8.0\refint\Pr5.dll
+C:\Users\Lima148\Desktop\College\C#\Pr5\obj\Debug\net8.0\Pr5.pdb
+C:\Users\Lima148\Desktop\College\C#\Pr5\obj\Debug\net8.0\Pr5.genruntimeconfig.cache
+C:\Users\Lima148\Desktop\College\C#\Pr5\obj\Debug\net8.0\ref\Pr5.dll

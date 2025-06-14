@@ -1,0 +1,100 @@
+﻿**********************
+Начало записи сценария Windows PowerShell
+Время начала: 20241022131152
+Имя пользователя: PTK\student
+Запуск от имени пользователя: PTK\student
+Имя конфигурации: 
+Компьютер: 226-1 (Microsoft Windows NT 10.0.19042.0)
+Ведущее приложение: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ИД процесса: 6648
+PSVersion: 5.1.19041.1320
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1320
+BuildVersion: 10.0.19041.1320
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Транскрибирование запущено, выходной файл Litovchenko_Ryzhov_P7
+PS C:\Users\Student.PTK\Litovchenko> $cat = New-Object -TypeName PSCat
+>> TerminatingError(New-Object): "Не удается найти тип [PSCat]: убедитесь в том, что сборка, содержащая этот тип, загружена."
+New-Object : Не удается найти тип [PSCat]: убедитесь в том, что сборка, содержащая этот тип, загружена.
+строка:1 знак:8
++ $cat = New-Object -TypeName PSCat
++        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : TypeNotFound,Microsoft.PowerShell.Commands.NewObjectCommand
+New-Object : Не удается найти тип [PSCat]: убедитесь в том, что сборка, содержащая этот тип, загружена.
+строка:1 знак:8
++ $cat = New-Object -TypeName PSCat
++        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : TypeNotFound,Microsoft.PowerShell.Commands.NewObjectCommand
+
+PS C:\Users\Student.PTK\Litovchenko> $cat = New-Object -TypeName System.Management.Automation.PSCustomObject
+>> TerminatingError(New-Object): "Конструктор не найден. Не удается найти соответствующий конструктор для типа System.Management.Automation.PSCustomObject."
+New-Object : Конструктор не найден. Не удается найти соответствующий конструктор для типа System.Management.Automation.P
+SCustomObject.
+строка:1 знак:8
++ $cat = New-Object -TypeName System.Management.Automation.PSCustomObje ...
++        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : CannotFindAppropriateCtor,Microsoft.PowerShell.Commands.NewObjectCommand
+New-Object : Конструктор не найден. Не удается найти соответствующий конструктор для типа System.Management.Automation.PSCustomObject.
+строка:1 знак:8
++ $cat = New-Object -TypeName System.Management.Automation.PSCustomObje ...
++        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : CannotFindAppropriateCtor,Microsoft.PowerShell.Commands.NewObjectCommand
+
+PS C:\Users\Student.PTK\Litovchenko> $cat = New-Object -TypeName PSCustomObject
+PS C:\Users\Student.PTK\Litovchenko> $cat | Add-Member -MemberType NoteProperty -Name "Name" -Value "Boris"
+PS C:\Users\Student.PTK\Litovchenko> $cat | Add-Member -MemberType NoteProperty -Name "Age" -Value 42
+PS C:\Users\Student.PTK\Litovchenko> $cat.Name = "bOris"
+PS C:\Users\Student.PTK\Litovchenko> $cat | Add-Member -MemberType ScriptMethod -Name "meow" -Value {Write-Host "Meow!"}
+PS C:\Users\Student.PTK\Litovchenko> $cat.Name = "Whiskers"
+PS C:\Users\Student.PTK\Litovchenko> $cat.meow()
+Meow!
+PS C:\Users\Student.PTK\Litovchenko> $cat | Get-Member
+
+
+   TypeName: System.Management.Automation.PSCustomObject
+
+Name        MemberType   Definition
+----        ----------   ----------
+Equals      Method       bool Equals(System.Object obj)
+GetHashCode Method       int GetHashCode()
+GetType     Method       type GetType()
+ToString    Method       string ToString()
+Age         NoteProperty int Age=42
+Name        NoteProperty string Name=Whiskers
+meow        ScriptMethod System.Object meow();
+
+
+PS C:\Users\Student.PTK\Litovchenko> $car = [PSCustomObject]@{
+Make = "Heaven"
+Model = "Saint"
+Year = "2025"
+}
+PS C:\Users\Student.PTK\Litovchenko> $car | Get-Member
+
+
+   TypeName: System.Management.Automation.PSCustomObject
+
+Name        MemberType   Definition
+----        ----------   ----------
+Equals      Method       bool Equals(System.Object obj)
+GetHashCode Method       int GetHashCode()
+GetType     Method       type GetType()
+ToString    Method       string ToString()
+Make        NoteProperty string Make=Heaven
+Model       NoteProperty string Model=Saint
+Year        NoteProperty string Year=2025
+
+
+PS C:\Users\Student.PTK\Litovchenko> Stop-Transcript
+**********************
+Конец записи протокола Windows PowerShell
+Время окончания: 20241022133859
+**********************
