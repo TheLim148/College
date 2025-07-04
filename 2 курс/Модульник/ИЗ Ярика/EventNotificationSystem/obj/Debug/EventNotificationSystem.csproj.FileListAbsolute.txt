@@ -1,0 +1,24 @@
+C:\Users\Ярослав\source\repos\EventNotificationSystem\EventNotificationSystem\bin\Debug\EventNotificationSystem.exe.config
+C:\Users\Ярослав\source\repos\EventNotificationSystem\EventNotificationSystem\bin\Debug\EventNotificationSystem.exe
+C:\Users\Ярослав\source\repos\EventNotificationSystem\EventNotificationSystem\bin\Debug\EventNotificationSystem.pdb
+C:\Users\Ярослав\source\repos\EventNotificationSystem\EventNotificationSystem\obj\Debug\EventNotificationSystem.csproj.AssemblyReference.cache
+C:\Users\Ярослав\source\repos\EventNotificationSystem\EventNotificationSystem\obj\Debug\EventNotificationSystem.MainForm.resources
+C:\Users\Ярослав\source\repos\EventNotificationSystem\EventNotificationSystem\obj\Debug\EventNotificationSystem.Properties.Resources.resources
+C:\Users\Ярослав\source\repos\EventNotificationSystem\EventNotificationSystem\obj\Debug\EventNotificationSystem.csproj.GenerateResource.cache
+C:\Users\Ярослав\source\repos\EventNotificationSystem\EventNotificationSystem\obj\Debug\EventNotificationSystem.csproj.CoreCompileInputs.cache
+C:\Users\Ярослав\source\repos\EventNotificationSystem\EventNotificationSystem\obj\Debug\EventNotificationSystem.exe
+C:\Users\Ярослав\source\repos\EventNotificationSystem\EventNotificationSystem\obj\Debug\EventNotificationSystem.pdb
+C:\Users\Ярослав\source\repos\EventNotificationSystem\EventNotificationSystem\obj\Debug\EventNotificationSystem.exe.config
+C:\Users\Lima148\Desktop\Новая папка\EventNotificationSystem\bin\Debug\EventNotificationSystem.exe.config
+C:\Users\Lima148\Desktop\Новая папка\EventNotificationSystem\bin\Debug\EventNotificationSystem.exe
+C:\Users\Lima148\Desktop\Новая папка\EventNotificationSystem\bin\Debug\EventNotificationSystem.pdb
+C:\Users\Lima148\Desktop\Новая папка\EventNotificationSystem\obj\Debug\EventNotificationSystem.csproj.AssemblyReference.cache
+C:\Users\Lima148\Desktop\Новая папка\EventNotificationSystem\obj\Debug\EventNotificationSystem.MainForm.resources
+C:\Users\Lima148\Desktop\Новая папка\EventNotificationSystem\obj\Debug\EventNotificationSystem.Properties.Resources.resources
+C:\Users\Lima148\Desktop\Новая папка\EventNotificationSystem\obj\Debug\EventNotificationSystem.csproj.GenerateResource.cache
+C:\Users\Lima148\Desktop\Новая папка\EventNotificationSystem\obj\Debug\EventNotificationSystem.csproj.CoreCompileInputs.cache
+C:\Users\Lima148\Desktop\Новая папка\EventNotificationSystem\obj\Debug\EventNotificationSystem.exe
+C:\Users\Lima148\Desktop\Новая папка\EventNotificationSystem\obj\Debug\EventNotificationSystem.pdb
+C:\Users\Lima148\Desktop\Новая папка\EventNotificationSystem\bin\Debug\System.Data.OleDb.dll
+C:\Users\Lima148\Desktop\Новая папка\EventNotificationSystem\bin\Debug\System.Data.OleDb.xml
+C:\Users\Lima148\Desktop\Новая папка\EventNotificationSystem\obj\Debug\EventNot.366E505D.Up2Date
