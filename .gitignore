@@ -1,0 +1,24 @@
+# Binaries
+*.exe
+bin/
+obj/
+
+# Lock
+*.~lock*
+
+# Trash
+__pycache__/
+env/
+venv/
+.venv
+htmlcov/
+target/
+out/
+node_modules/
+*.dll
+
+# Jupiter Notebook
+*.ipynb
+
+# Repositories
+repos/

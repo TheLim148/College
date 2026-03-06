@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 11</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="user-data" class="card">
+        <h1 id="user-name"></h1>
+        <p id="user-email"></p>
+        <p id="user-age"></p>
+        <p id="user-gender"></p>
+        <img id="user-picture" src="" alt="User Picture">
+    </div>
+
+    <script>
+        fetch("https://randomuser.me/api/")
+        .then(response => response.json())
+        .then(data => {
+            const userData = data.results[0];
+            document.getElementById('user-picture').src = userData.picture.large;
+            document.getElementById("user-name").innerText = `${userData.name.first} ${userData.name.last}`;
+            document.getElementById("user-age").innerText = userData.dob.age;
+            document.getElementById("user-gender").innerText = userData.gender;
+            document.getElementById("user-email").innerText = userData.email;
+        })
+        .catch(error => console.error("Error: ", error));
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lima148\\Desktop\\IncomesAndExpenses\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C9D4ED98-DBBC-4DA1-B5D7-87BF30995818}|BudgetTests\\BudgetTests.csproj|c:\\users\\lima148\\desktop\\incomesandexpenses\\budgettests\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9D4ED98-DBBC-4DA1-B5D7-87BF30995818}|BudgetTests\\BudgetTests.csproj|solutionrelative:budgettests\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9E35F11-53C8-4240-B566-DEFF1BD6B1C2}|IncomesAndExpenses\\IncomesAndExpenses.csproj|C:\\Users\\Lima148\\Desktop\\IncomesAndExpenses\\incomesandexpenses\\budgetentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9E35F11-53C8-4240-B566-DEFF1BD6B1C2}|IncomesAndExpenses\\IncomesAndExpenses.csproj|solutionrelative:incomesandexpenses\\budgetentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9E35F11-53C8-4240-B566-DEFF1BD6B1C2}|IncomesAndExpenses\\IncomesAndExpenses.csproj|C:\\Users\\Lima148\\Desktop\\IncomesAndExpenses\\incomesandexpenses\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9E35F11-53C8-4240-B566-DEFF1BD6B1C2}|IncomesAndExpenses\\IncomesAndExpenses.csproj|solutionrelative:incomesandexpenses\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9E35F11-53C8-4240-B566-DEFF1BD6B1C2}|IncomesAndExpenses\\IncomesAndExpenses.csproj|C:\\Users\\Lima148\\Desktop\\IncomesAndExpenses\\incomesandexpenses\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A9E35F11-53C8-4240-B566-DEFF1BD6B1C2}|IncomesAndExpenses\\IncomesAndExpenses.csproj|solutionrelative:incomesandexpenses\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BudgetEntry.cs",
+              "DocumentMoniker": "C:\\Users\\Lima148\\Desktop\\IncomesAndExpenses\\IncomesAndExpenses\\BudgetEntry.cs",
+              "RelativeDocumentMoniker": "IncomesAndExpenses\\BudgetEntry.cs",
+              "ToolTip": "C:\\Users\\Lima148\\Desktop\\IncomesAndExpenses\\IncomesAndExpenses\\BudgetEntry.cs",
+              "RelativeToolTip": "IncomesAndExpenses\\BudgetEntry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T13:27:14.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Lima148\\Desktop\\IncomesAndExpenses\\BudgetTests\\Class1.cs",
+              "RelativeDocumentMoniker": "BudgetTests\\Class1.cs",
+              "ToolTip": "C:\\Users\\Lima148\\Desktop\\IncomesAndExpenses\\BudgetTests\\Class1.cs",
+              "RelativeToolTip": "BudgetTests\\Class1.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwD0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T14:23:37.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Lima148\\Desktop\\IncomesAndExpenses\\IncomesAndExpenses\\Form1.cs",
+              "RelativeDocumentMoniker": "IncomesAndExpenses\\Form1.cs",
+              "ToolTip": "C:\\Users\\Lima148\\Desktop\\IncomesAndExpenses\\IncomesAndExpenses\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "IncomesAndExpenses\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T14:00:48.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Lima148\\Desktop\\IncomesAndExpenses\\IncomesAndExpenses\\Form1.cs",
+              "RelativeDocumentMoniker": "IncomesAndExpenses\\Form1.cs",
+              "ToolTip": "C:\\Users\\Lima148\\Desktop\\IncomesAndExpenses\\IncomesAndExpenses\\Form1.cs",
+              "RelativeToolTip": "IncomesAndExpenses\\Form1.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T11:58:32.941Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

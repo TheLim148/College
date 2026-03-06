@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lima148\\Desktop\\College\\4 \u0421\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u041F\u041C\\\u041F\u0440\u0430\u043A\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F 7\\WpfApp9\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{23AAA2A5-0D02-4C84-A2EF-D514BAAC4CCB}|WpfApp9.csproj|C:\\Users\\Lima148\\Desktop\\College\\4 \u0421\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u041F\u041C\\\u041F\u0440\u0430\u043A\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F 7\\WpfApp9\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{23AAA2A5-0D02-4C84-A2EF-D514BAAC4CCB}|WpfApp9.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23AAA2A5-0D02-4C84-A2EF-D514BAAC4CCB}|WpfApp9.csproj|c:\\users\\lima148\\desktop\\college\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0440\u043F\u043C\\\u043F\u0440\u0430\u043A\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F 7\\wpfapp9\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23AAA2A5-0D02-4C84-A2EF-D514BAAC4CCB}|WpfApp9.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Lima148\\Desktop\\College\\4 \u0421\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u041F\u041C\\\u041F\u0440\u0430\u043A\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F 7\\WpfApp9\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Lima148\\Desktop\\College\\4 \u0421\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u041F\u041C\\\u041F\u0440\u0430\u043A\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F 7\\WpfApp9\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-10T09:49:09.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Lima148\\Desktop\\College\\4 \u0421\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u041F\u041C\\\u041F\u0440\u0430\u043A\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F 7\\WpfApp9\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Lima148\\Desktop\\College\\4 \u0421\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u041F\u041C\\\u041F\u0440\u0430\u043A\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F 7\\WpfApp9\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T09:49:09.515Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+create table performances (
+    id serial primary key,
+    title varchar(200) not null,
+    description text,
+    duration integer not null,
+    age_rating varchar(20) not null
+);
+
+create table actors (
+    id serial primary key,
+    full_name varchar(200) not null,
+    role_type varchar(100),
+    experience integer default 0
+);
+
+create table sessions (
+    id serial primary key,
+    performance_id integer not null,
+    session_date date not null,
+    session_time time not null,
+    hall varchar(100) not null,
+    status varchar(20) default 'scheduled'
+);
+
+create table pricing (
+    id serial primary key,
+    session_id integer not null,
+    seat_type varchar(10) not null,
+    price decimal(8,2) not null,
+    unique (session_id, seat_type)
+);
+
+create table tickets (
+    id serial primary key,
+    ticket_number varchar(50) unique not null,
+    pricing_id integer not null,
+    seat_number varchar(10) not null,
+    status varchar(10) default 'available'
+);
+
+create table users (
+    id serial primary key,
+    username varchar(50) unique not null,
+    role varchar(20) not null,
+    full_name varchar(200) not null
+);
+
+create table actor_performance (
+    actor_id integer not null,
+    performance_id integer not null,
+    primary key (actor_id, performance_id)
+);
+
+
+insert into performances (title, description, duration, age_rating) values
+('Фантастический мир', 'Акробатика и магия', 120, '6+'),
+('Цирк животных', 'Выступление с дрессированными животными', 90, '3+'),
+('Огненная феерия', 'Экстремальные трюки и спецэффекты', 105, '12+');
+
+insert into actors (full_name, role_type, experience) values
+('Иванов Иван Петрович', 'акробат', 8),
+('Петрова Мария Сергеевна', 'жонглёр', 5),
+('Сидоров Алексей Владимирович', 'клоун', 12),
+('Кузнецова Елена Дмитриевна', 'дрессировщик', 10);
+
+insert into sessions (performance_id, session_date, session_time, hall, status) values
+(1, '2024-01-15', '19:00:00', 'Большой зал', 'scheduled'),
+(1, '2024-01-16', '18:30:00', 'Большой зал', 'scheduled'),
+(2, '2024-01-15', '15:00:00', 'Арена 2', 'scheduled'),
+(3, '2024-01-17', '20:00:00', 'Большой зал', 'scheduled');
+
+insert into pricing (session_id, seat_type, price) values
+(1, 'row', 1500.00),
+(1, 'sector', 1000.00),
+(1, 'vip', 2500.00),
+(2, 'row', 1200.00),
+(2, 'sector', 800.00),
+(3, 'row', 1300.00);
+
+insert into tickets (ticket_number, pricing_id, seat_number, status) values
+('T001', 1, 'A12', 'sold'),
+('T002', 1, 'A13', 'available'),
+('T003', 2, 'S1-4', 'sold'),
+('T004', 3, 'VIP1', 'available'),
+('T005', 4, 'B5', 'sold');
+
+insert into users (username, role, full_name) values
+('admin', 'administrator', 'Сергеев Сергей Иванович'),
+('cashier1', 'cashier', 'Петрова Ольга Викторовна'),
+('viewer1', 'guest', 'Волков Михаил Алексеевич');
+
+insert into actor_performance (actor_id, performance_id) values
+(1, 1), -- Иванов в "Фантастический мир"
+(2, 1), -- Петрова в "Фантастический мир"
+(3, 2), -- Сидоров в "Цирк животных"
+(4, 2), -- Кузнецова в "Цирк животных"
+(1, 3), -- Иванов в "Огненная феерия"
+(4, 3); -- Кузнецова в "Огненная феерия"
+
+
+select * from performances;
+
+select * from actors;
+
+-- Посмотреть расписание с названиями представлений
+select s.*, p.title 
+from sessions s 
+join performances p on s.performance_id = p.id;
+
+-- Посмотреть цены на билеты с информацией о сеансах
+select pr.*, s.session_date, s.session_time, p.title
+from pricing pr
+join sessions s on pr.session_id = s.id
+join performances p on s.performance_id = p.id;
+
+select * from tickets where status = 'sold';
+
+-- Посмотреть актёров и их представления
+select a.full_name, p.title
+from actor_performance ap
+join actors a on ap.actor_id = a.id
+join performances p on ap.performance_id = p.id;

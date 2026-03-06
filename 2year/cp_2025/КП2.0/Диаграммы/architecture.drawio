@@ -1,0 +1,72 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:138.0) Gecko/20100101 Firefox/138.0" version="27.0.6">
+  <diagram name="Страница — 1" id="O3shlfAOvwaR4UEUx2I7">
+    <mxGraphModel dx="1137" dy="665" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-1" value="Приложение " style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="180" width="420" height="410" as="geometry" />
+        </mxCell>
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-4" value="Модуль управления бюджетом" style="swimlane;whiteSpace=wrap;html=1;startSize=50;" vertex="1" parent="XR4OOTuMff1kbpOcb8c1-1">
+          <mxGeometry x="4" y="30" width="200" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-7" value="Расчёт остатка бюджета" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="XR4OOTuMff1kbpOcb8c1-4">
+          <mxGeometry x="6" y="60" width="184" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-18" value="Вычитание резервов" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="XR4OOTuMff1kbpOcb8c1-4">
+          <mxGeometry x="8" y="110" width="184" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-19" value="Форматирование денежного значения" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="XR4OOTuMff1kbpOcb8c1-4">
+          <mxGeometry x="8" y="160" width="184" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-5" value="Модуль планирования и резервации" style="swimlane;whiteSpace=wrap;html=1;startSize=50;" vertex="1" parent="XR4OOTuMff1kbpOcb8c1-1">
+          <mxGeometry x="210" y="245" width="200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-20" value="Создание, редактирование и удаление планов" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="XR4OOTuMff1kbpOcb8c1-5">
+          <mxGeometry x="8" y="60" width="184" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-21" value="Перемещение планов в резерв или архив" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="XR4OOTuMff1kbpOcb8c1-5">
+          <mxGeometry x="8" y="110" width="184" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-6" value="Модуль пользовательского интерфейса" style="swimlane;whiteSpace=wrap;html=1;startSize=50;" vertex="1" parent="XR4OOTuMff1kbpOcb8c1-1">
+          <mxGeometry x="210" y="30" width="200" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-22" value="Основной экран" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="XR4OOTuMff1kbpOcb8c1-6">
+          <mxGeometry x="8" y="60" width="184" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-23" value="Элементы управления: кнопки, шкалы, всплывающие окна" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="XR4OOTuMff1kbpOcb8c1-6">
+          <mxGeometry x="8" y="110" width="184" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-24" value="Визуализация резервов, расходов, остатков" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="XR4OOTuMff1kbpOcb8c1-6">
+          <mxGeometry x="8" y="160" width="184" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-25" value="Модуль сохранения данных" style="swimlane;whiteSpace=wrap;html=1;startSize=50;" vertex="1" parent="XR4OOTuMff1kbpOcb8c1-1">
+          <mxGeometry x="4" y="245" width="200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-26" value="Сохранение состояния между сессиями" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="XR4OOTuMff1kbpOcb8c1-25">
+          <mxGeometry x="8" y="60" width="184" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-27" value="Работа с локальными JSON-файлами" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="XR4OOTuMff1kbpOcb8c1-25">
+          <mxGeometry x="8" y="110" width="184" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="XR4OOTuMff1kbpOcb8c1-2" target="XR4OOTuMff1kbpOcb8c1-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="630" />
+              <mxPoint x="430" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-2" value="Godot Engine" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XR4OOTuMff1kbpOcb8c1-29" target="XR4OOTuMff1kbpOcb8c1-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XR4OOTuMff1kbpOcb8c1-29" value="JSON" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="90" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

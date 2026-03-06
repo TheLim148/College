@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: "Montserrat";
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.head_buttons {
+    justify-content: right;
+}
+
+.search_input {
+    border: 1px solid #DDDE;
+    border-radius: 5px;
+    padding: 4px;
+    background-color: white;
+    height: 40px;
+    font-size: 16px;
+}
+
+.loupe_icon {
+    width: 50px;
+    height: 50px;
+    background-color: #10B981;
+    border: 1px solid #10B981;
+    border-radius: 7px;
+    margin-left: 10px;
+}
+
+.down_panel {
+    display: flex;
+    background-color: #10B981;
+    justify-content: space-around;
+    padding-left: 400px;
+    padding-right: 400px;
+}
+
+.down_panel a {
+    background-color: #10B981;
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.down_panel a:hover {
+    color:aquamarine;
+}
+
+.cart_button {
+    border: 1px solid #10B981;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    font-size: 16px;
+    margin-left: 40px;   
+}
+
+.login_button {
+    border: 1px solid #10B981;
+    border-radius: 30px;
+    background-color: #10B981;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.logo {
+    display: flex;
+    padding: 10px;
+    padding-right: 800px;
+}
+

@@ -1,0 +1,793 @@
+﻿PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function isprime {
+param($n)
+if ($n -le 1) {return 0};
+for($i = 2; $i -lt $n; $i++) {
+if ($n % $i -eq 0) {
+return 0;
+} 
+return 1;
+}
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> isprime 4
+0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> isprime 2
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> isprime 1
+0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> isprime 5
+1
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function isprime {
+param($n)
+if ($n -le 1) {return "false"};
+for($i = 2; $i -lt $n; $i++) {
+if ($n % $i -eq 0) {
+return "false";
+} 
+return "true";
+}
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> isprime 5
+true
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> isprime 8
+false
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function countToN {
+param($n)
+$sum = 0
+for($i = 0; $i -le $n; $i++) {
+$sum += $i;
+}
+write-host("sum from 1 to n equals $sum")
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> countToN 6
+sum from 1 to n equals 21
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> countToN 0
+sum from 1 to n equals 0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> countToN 1
+sum from 1 to n equals 1
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function countToN {
+param($n)
+$sum = 0
+for($i = 0; $i -le $n; $i++) {
+$sum += $i;
+}
+write-host("sum from 1 to $n equals $sum")
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> countToN 6
+sum from 1 to 6 equals 21
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> countToN -1
+sum from 1 to -1 equals 0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $array = [4, 5, 6, 3, 7, 42, 99]
+строка:1 знак:11
++ $array = [4, 5, 6, 3, 7, 42, 99]
++           ~
+Отсутствует имя типа после знака "[".
+
+строка:1 знак:12
++ $array = [4, 5, 6, 3, 7, 42, 99]
++            ~
+Отсутствует аргумент в списке параметров.
+строка:1 знак:11
++ $array = [4, 5, 6, 3, 7, 42, 99]
++           ~
+Отсутствует имя типа после знака "[".
+
+строка:1 знак:12
++ $array = [4, 5, 6, 3, 7, 42, 99]
++            ~
+Отсутствует аргумент в списке параметров.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $array = 4, 5, 6, 3, 7, 42, 99
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function sortArray {
+param($array)
+for($i = 1; $i -lt $array.length; $i++){
+for($j = 0; $j -lt $array.length; $j++){
+if($array[$j] -gt $array[$j+1]) {
+$temp = $array[$j]
+$array[$j] = $array[$j+1]
+$array[$j+1] = $temp
+}
+}
+}
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function sortArray {
+param($array)
+for($i = 1; $i -lt $array.length; $i++){
+for($j = 0; $j -lt $array.length; $j++){
+if($array[$j] -gt $array[$j+1]) {
+$temp = $array[$j]
+$array[$j] = $array[$j+1]
+$array[$j+1] = $temp
+}
+}
+}
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function sortArray {
+param($array)
+for($i = 1; $i -lt $array.length; $i++){
+for($j = 0; $j -lt $array.length; $j++){
+if($array[$j] -gt $array[$j+1]) {
+$temp = $array[$j]
+$array[$j] = $array[$j+1]
+$array[$j+1] = $temp
+}
+}
+}
+write-host($array)
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> sortArray $array
+Индекс находился вне границ массива.
+строка:8 знак:1
++ $array[$j+1] = $temp
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], IndexOutOfRangeException
+    + FullyQualifiedErrorId : System.IndexOutOfRangeException
+Индекс находился вне границ массива.
+строка:8 знак:1
++ $array[$j+1] = $temp
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], IndexOutOfRangeException
+    + FullyQualifiedErrorId : System.IndexOutOfRangeException
+
+Индекс находился вне границ массива.
+строка:8 знак:1
++ $array[$j+1] = $temp
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], IndexOutOfRangeException
+    + FullyQualifiedErrorId : System.IndexOutOfRangeException
+Индекс находился вне границ массива.
+строка:8 знак:1
++ $array[$j+1] = $temp
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], IndexOutOfRangeException
+    + FullyQualifiedErrorId : System.IndexOutOfRangeException
+
+Индекс находился вне границ массива.
+строка:8 знак:1
++ $array[$j+1] = $temp
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], IndexOutOfRangeException
+    + FullyQualifiedErrorId : System.IndexOutOfRangeException
+Индекс находился вне границ массива.
+строка:8 знак:1
++ $array[$j+1] = $temp
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], IndexOutOfRangeException
+    + FullyQualifiedErrorId : System.IndexOutOfRangeException
+
+Индекс находился вне границ массива.
+строка:8 знак:1
++ $array[$j+1] = $temp
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], IndexOutOfRangeException
+    + FullyQualifiedErrorId : System.IndexOutOfRangeException
+Индекс находился вне границ массива.
+строка:8 знак:1
++ $array[$j+1] = $temp
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], IndexOutOfRangeException
+    + FullyQualifiedErrorId : System.IndexOutOfRangeException
+
+Индекс находился вне границ массива.
+строка:8 знак:1
++ $array[$j+1] = $temp
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], IndexOutOfRangeException
+    + FullyQualifiedErrorId : System.IndexOutOfRangeException
+Индекс находился вне границ массива.
+строка:8 знак:1
++ $array[$j+1] = $temp
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], IndexOutOfRangeException
+    + FullyQualifiedErrorId : System.IndexOutOfRangeException
+
+Индекс находился вне границ массива.
+строка:8 знак:1
++ $array[$j+1] = $temp
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], IndexOutOfRangeException
+    + FullyQualifiedErrorId : System.IndexOutOfRangeException
+Индекс находился вне границ массива.
+строка:8 знак:1
++ $array[$j+1] = $temp
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], IndexOutOfRangeException
+    + FullyQualifiedErrorId : System.IndexOutOfRangeException
+
+3
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function sortArray {
+param($array)
+for($i = 1; $i -lt $array.Length; $i++){
+for($j = 0; $j -lt $array.Length; $j++){
+if($array[$j] -gt $array[$j+1]) {
+$temp = $array[$j]
+$array[$j] = $array[$j+1]
+$array[$j+1] = $temp
+}
+}
+}
+write-host($array)
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> sortArray $array
+Индекс находился вне границ массива.
+строка:8 знак:1
++ $array[$j+1] = $temp
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], IndexOutOfRangeException
+    + FullyQualifiedErrorId : System.IndexOutOfRangeException
+Индекс находился вне границ массива.
+строка:8 знак:1
++ $array[$j+1] = $temp
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], IndexOutOfRangeException
+    + FullyQualifiedErrorId : System.IndexOutOfRangeException
+
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $array | sort-object
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $array 
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $array = 2, 3, 5, 42, 99, 15
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $sorted_array = $array | Sort-Object
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $sorted_array
+2
+3
+5
+15
+42
+99
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $sorted_arrray[-2]
+Не удается индексировать в массив NULL.
+строка:1 знак:1
++ $sorted_arrray[-2]
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+Не удается индексировать в массив NULL.
+строка:1 знак:1
++ $sorted_arrray[-2]
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $sorted_arrray[$sorted_array.length-1]
+Не удается индексировать в массив NULL.
+строка:1 знак:1
++ $sorted_arrray[$sorted_array.length-1]
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+Не удается индексировать в массив NULL.
+строка:1 знак:1
++ $sorted_arrray[$sorted_array.length-1]
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $sorted_arrray[1]
+Не удается индексировать в массив NULL.
+строка:1 знак:1
++ $sorted_arrray[1]
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+Не удается индексировать в массив NULL.
+строка:1 знак:1
++ $sorted_arrray[1]
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $array
+2
+3
+5
+42
+99
+15
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $array[-1]
+15
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $array[-2]
+99
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> [array]$sorted_array[-2]
+42
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function sortArray {
+param($array)
+$sorted_array = $array | sort-object
+write-host($sorted_array)
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> sortArray $array
+2 3 5 15 42 99
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function sortArray {
+param($array)
+$sorted_array = $array | sort-object
+write-host("unsorted array "$array)
+write-host("sorted array "$sorted_array)
+}
+строка:4 знак:29
++ write-host("unsorted array "$array)
++                             ~~~~~~
+Непредвиденная лексема "$array" в выражении или операторе.
+
+строка:4 знак:29
++ write-host("unsorted array "$array)
++                             ~
+Отсутствует закрывающий знак ")" в выражении.
+
+строка:1 знак:20
++ function sortArray {
++                    ~
+Отсутствует закрывающий знак "}" в блоке операторов или определении типа.
+
+строка:4 знак:35
++ write-host("unsorted array "$array)
++                                   ~
+Непредвиденная лексема ")" в выражении или операторе.
+
+строка:5 знак:27
++ write-host("sorted array "$sorted_array)
++                           ~~~~~~~~~~~~~
+Непредвиденная лексема "$sorted_array" в выражении или операторе.
+
+строка:5 знак:27
++ write-host("sorted array "$sorted_array)
++                           ~
+Отсутствует закрывающий знак ")" в выражении.
+
+строка:5 знак:40
++ write-host("sorted array "$sorted_array)
++                                        ~
+Непредвиденная лексема ")" в выражении или операторе.
+
+строка:6 знак:1
++ }
++ ~
+Непредвиденная лексема "}" в выражении или операторе.
+строка:4 знак:29
++ write-host("unsorted array "$array)
++                             ~~~~~~
+Непредвиденная лексема "$array" в выражении или операторе.
+
+строка:4 знак:29
++ write-host("unsorted array "$array)
++                             ~
+Отсутствует закрывающий знак ")" в выражении.
+
+строка:1 знак:20
++ function sortArray {
++                    ~
+Отсутствует закрывающий знак "}" в блоке операторов или определении типа.
+
+строка:4 знак:35
++ write-host("unsorted array "$array)
++                                   ~
+Непредвиденная лексема ")" в выражении или операторе.
+
+строка:5 знак:27
++ write-host("sorted array "$sorted_array)
++                           ~~~~~~~~~~~~~
+Непредвиденная лексема "$sorted_array" в выражении или операторе.
+
+строка:5 знак:27
++ write-host("sorted array "$sorted_array)
++                           ~
+Отсутствует закрывающий знак ")" в выражении.
+
+строка:5 знак:40
++ write-host("sorted array "$sorted_array)
++                                        ~
+Непредвиденная лексема ")" в выражении или операторе.
+
+строка:6 знак:1
++ }
++ ~
+Непредвиденная лексема "}" в выражении или операторе.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function sortArray {
+param($array)
+$sorted_array = $array | sort-object
+write-host("unsorted array $array")
+write-host("sorted array $sorted_array")
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> sortArray $array
+unsorted array 2 3 5 42 99 15
+sorted array 2 3 5 15 42 99
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function findSecondMax {
+param($array)
+$sorted_array = $array | sort-object
+$second_max = [array]$sorted_array[-2]
+write-host("second max number in array is $second_max"
+}
+строка:5 знак:55
++ write-host("second max number in array is $second_max"
++                                                       ~
+Отсутствует закрывающий знак ")" в выражении.
+строка:5 знак:55
++ write-host("second max number in array is $second_max"
++                                                       ~
+Отсутствует закрывающий знак ")" в выражении.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingEndParenthesisInExpression
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function findSecondMax {
+param($array)
+$sorted_array = $array | sort-object
+$second_max = [array]$sorted_array[-2]
+write-host("second max number in array is $second_max")
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> findSecondMax $array
+second max number in array is 42
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function findSecondMax {
+param($array)
+$sorted_array = $array | sort-object
+$second_max = [array]$sorted_array[-2]
+write-host("array $array")
+write-host("second max number in array is $second_max")
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> findSecondMax $array
+array 2 3 5 42 99 15
+second max number in array is 42
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $array1 = 1, 2, 3
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $array2 = 4, 5, 6
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function mergeArrays{
+param($array1, $array2)
+$combine_array = $array1 + $array2
+write-host("combine array is $combine_array")
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> mergeArrays $array1 $array2
+combine array is 1 2 3 4 5 6
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateDistance {
+param($x1, $y1, $x2, $y2)
+$distance = [math]::Sqrt(([math]::Pow($x2 - $x1), 2) - ([math]::Pow($y2 - $y1), 2))
+write-host("distance from x to y equals $distance")
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateDistance 1 1 2 2
+Не удается найти перегрузку для "Pow" и количества аргументов: "1".
+строка:3 знак:1
++ $distance = [math]::Sqrt(([math]::Pow($x2 - $x1), 2) - ([math]::Pow($ ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodException
+    + FullyQualifiedErrorId : MethodCountCouldNotFindBest
+Не удается найти перегрузку для "Pow" и количества аргументов: "1".
+строка:3 знак:1
++ $distance = [math]::Sqrt(([math]::Pow($x2 - $x1), 2) - ([math]::Pow($ ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodException
+    + FullyQualifiedErrorId : MethodCountCouldNotFindBest
+
+distance from x to y equals
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateDistance {
+param($x1, $y1, $x2, $y2)
+$distance = [math]::Sqrt(([math]::Pow(($x2 - $x1), 2) - ([math]::Pow(($y2 - $y1), 2))
+write-host("distance from x to y equals $distance")
+}
+строка:3 знак:86
++ ... h]::Sqrt(([math]::Pow(($x2 - $x1), 2) - ([math]::Pow(($y2 - $y1), 2))
++                                                                          ~
+Отсутствует закрывающий знак ")" в выражении.
+
+строка:3 знак:86
++ ... h]::Sqrt(([math]::Pow(($x2 - $x1), 2) - ([math]::Pow(($y2 - $y1), 2))
++                                                                          ~
+Отсутствует ")" в вызове метода.
+
+строка:4 знак:1
++ write-host("distance from x to y equals $distance")
++ ~~~~~~~~~~
+Непредвиденная лексема "write-host" в выражении или операторе.
+строка:3 знак:86
++ ... h]::Sqrt(([math]::Pow(($x2 - $x1), 2) - ([math]::Pow(($y2 - $y1), 2))
++                                                                          ~
+Отсутствует закрывающий знак ")" в выражении.
+
+строка:3 знак:86
++ ... h]::Sqrt(([math]::Pow(($x2 - $x1), 2) - ([math]::Pow(($y2 - $y1), 2))
++                                                                          ~
+Отсутствует ")" в вызове метода.
+
+строка:4 знак:1
++ write-host("distance from x to y equals $distance")
++ ~~~~~~~~~~
+Непредвиденная лексема "write-host" в выражении или операторе.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingEndParenthesisInExpression
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function calculateDistance {
+param($x1, $y1, $x2, $y2)
+$square1 = [math]::Pow(($x2 - $x1), 2)
+$square2 = [math]::Pow(($y2 - $y1), 2)
+$distance = [math]::Sqrt($square1 + $square2)
+write-host("distance from x to y equals $distance")
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateDistance 1 1 2 2
+distance from x to y equals 1.4142135623731
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> calculateDistance 1 2 1 2
+distance from x to y equals 0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function isLeapYear {
+param($year)
+if($year % 4 -eq 0) {
+return "true"}
+return "false"
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> isLeapYear 2020
+true
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> isLeapYear 2021
+false
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function generateUUID {
+write-host(new-guid)
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> generateUUID
+4f1ba69d-5241-44f5-bb74-614f77dd6464
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> generateUUID
+2647649b-65f7-4883-acbe-8b13e4c084a6
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function counConsonants {
+param($string)
+$charToCount = 'i'
+$charCount = ($string.ToCharArray() | Where-Object {$_ -eq 'b' -or 'c' -or 'd' -or 'f' -or 'g' -or 'h' -or 'j' -or 'k' -or 'l' -or 'm' -or 'n' -or 'p' -or 'q' -or 'r' -or 's' -or 't' -or 'v' -or 'w' -or 'x' -or 'y' -or 'z'}).Count
+write-host $charCount
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function countConsonants {
+param($string)
+$charToCount = 'i'
+$charCount = ($string.ToCharArray() | Where-Object {$_ -eq 'b' -or 'c' -or 'd' -or 'f' -or 'g' -or 'h' -or 'j' -or 'k' -or 'l' -or 'm' -or 'n' -or 'p' -or 'q' -or 'r' -or 's' -or 't' -or 'v' -or 'w' -or 'x' -or 'y' -or 'z'}).Count
+write-host $charCount
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> TerminatingError(TabExpansion2): "Не удается привязать аргумент к параметру "inputScript", так как он представляет собой пустую строку."
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> countConsonants hello world
+5
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> countConsonants helloworld
+10
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> countConsonants hello
+5
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function countConsonants {
+param($string)
+$charCount = ($string.ToCharArray() | Where-Object {$_ -eq 'b' -or 'c' -or 'd' -or 'f' -or 'g' -or 'h' -or 'j' -or 'k' -or 'l' -or 'm' -or 'n' -or 'p' -or 'q' -or 'r' -or 's' -or 't' -or 'v' -or 'w' -or 'x' -or 'y' -or 'z'}).Count
+write-host $charCount
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> countConsonants hello
+5
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> aeui
+aeui : Имя "aeui" не распознано как имя командлета, функции, файла сценария или выполняемой программы. Проверьте правиль
+ность написания имени, а также наличие и правильность пути, после чего повторите попытку.
+строка:1 знак:1
++ aeui
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (aeui:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+aeui : Имя "aeui" не распознано как имя командлета, функции, файла сценария или выполняемой программы. Проверьте правильность написания имени, а
+ также наличие и правильность пути, после чего повторите попытку.
+строка:1 знак:1
++ aeui
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (aeui:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> countConsonants aeui
+4
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function countConsonants {
+param($string)
+$charCount = ($string.ToCharArray() | Where-Object {$_ -eq 'b' -or 'c' -or 'd' -or 'f' -or 'g' -or 'h' -or 'j' -or 'k' -or 'l' -or 'm' -or 'n' -or 'p' -or 'q' -or 'r' -or 's' -or 't' -or 'v' -or 'w' -or 'x' -or 'y', 'z'}).Count
+write-host $charCount
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> countConsonants a
+1
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function countConsonants {
+param($string)
+$charCount = ($string.ToCharArray() | Where-Object {$_ -eq 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'}).Count
+write-host $charCount
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> countConsonants a
+0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> countConsonants hello
+0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function countConsonants {
+param($string)
+write-host([regex]::Matches($string, 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z')).count
+#$charCount = ($string.ToCharArray() | Where-Object {$_ -eq 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'}).Count
+#write-host $charCount
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> countConsonants hello
+Не удается найти перегрузку для "Matches" и количества аргументов: "22".
+строка:3 знак:1
++ write-host([regex]::Matches($string, 'b', 'c', 'd', 'f', 'g', 'h', 'j ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodException
+    + FullyQualifiedErrorId : MethodCountCouldNotFindBest
+Не удается найти перегрузку для "Matches" и количества аргументов: "22".
+строка:3 знак:1
++ write-host([regex]::Matches($string, 'b', 'c', 'd', 'f', 'g', 'h', 'j ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodException
+    + FullyQualifiedErrorId : MethodCountCouldNotFindBest
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function countConsonants {
+param($string)
+write-host(([regex]::Matches($string, 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z')).count)
+#$charCount = ($string.ToCharArray() | Where-Object {$_ -eq 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'}).Count
+#write-host $charCount
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> countConsonants hello
+Не удается найти перегрузку для "Matches" и количества аргументов: "22".
+строка:3 знак:1
++ write-host(([regex]::Matches($string, 'b', 'c', 'd', 'f', 'g', 'h', ' ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodException
+    + FullyQualifiedErrorId : MethodCountCouldNotFindBest
+Не удается найти перегрузку для "Matches" и количества аргументов: "22".
+строка:3 знак:1
++ write-host(([regex]::Matches($string, 'b', 'c', 'd', 'f', 'g', 'h', ' ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodException
+    + FullyQualifiedErrorId : MethodCountCouldNotFindBest
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function countConsonants {
+param($string)
+write-host(([regex]::Matches($string, 'b')).count)
+#$charCount = ($string.ToCharArray() | Where-Object {$_ -eq 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'}).Count
+#write-host $charCount
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> countConsonants hello
+0
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> $array = 1, 2, 3, 4, 4, 4, 5, 5, 6, 7
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function findFirstDuplicate {
+param($array)
+$array | Group | Where{$_.Count -gt 1} | Select-Object Name
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> findFirstDuplicate $array
+
+Name
+----
+4
+5
+
+
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function isAnagramm {
+param($array)
+$reversed_array = $array[-1..-($array.length)]
+if($array -eq $reversed_array) {
+return "true"}
+return "false"
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> isAnagramm hello
+false
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> isAnagramm lol
+false
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function isAnagramm {
+param($array)
+$reversed_array = $array[-1..-($array.length)]
+if($array -eq $reversed_array) {
+return "true"} else {
+return "false"}
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> isAnagramm lol
+false
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function isAnagramm {
+param($array)
+$reversed_array = $array[-1..-($array.length)]
+if($array -eq $reversed_array) {
+return "true"} else {
+return "false"}
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function isAnagramm {
+param($array)
+$reversed_array = $array[-1..-($array.length)]
+if($array -eq $reversed_array) {
+return "true"} else {
+return "false"}
+
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function isAnagramm {
+param($array)
+$reversed_array = $array[-1..-($array.length)]
+if($array -eq $reversed_array) {
+return "true"} else {
+return "false"}
+write-host ($array)
+write-host ($reversed_array)
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> isAnagramm lol
+false
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function isAnagramm {
+param($array)
+$reversed_array = $array[-1..-($array.length)]
+if($array -eq $reversed_array) {
+return "true"} else {
+return "false"}
+write-host ($array)
+write-host ($reversed_array)
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> isAnagramm lol
+false
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function isAnagramm {
+param($array)
+$array.tochararray()
+$reversed_array = $array[-1..-($array.length)]
+if($array -eq $reversed_array) {
+return "true"} else {
+return "false"}
+write-host ($array)
+write-host ($reversed_array)
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> isAnagramm lol
+l
+o
+l
+false
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function isAnagramm {
+param($array)
+$array.tochararray()
+write-host ($array)
+write-host ($reversed_array)
+$reversed_array = $array[-1..-($array.length)]
+if($array -eq $reversed_array) {
+return "true"} else {
+return "false"}
+
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> isAnagramm lol
+l
+o
+l
+lol
+
+false
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function isAnagramm {
+param($array)
+$array.tochararray()
+
+$reversed_array = $array[-1..-($array.length)]
+$reversed_array.tochararray()
+if($array -eq $reversed_array) {
+return "true"} else {
+return "false"}
+write-host ($array)
+write-host ($reversed_array)
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> isAnagramm lol
+l
+o
+l
+Сбой вызова метода из-за отсутствия в [System.Char] метода с именем "ToCharArray".
+строка:6 знак:1
++ $reversed_array.tochararray()
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : MethodNotFound
+Сбой вызова метода из-за отсутствия в [System.Char] метода с именем "ToCharArray".
+строка:6 знак:1
++ $reversed_array.tochararray()
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : MethodNotFound
+
+false
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function isAnagramm {
+param($array)
+$array.tochararray()
+$reversedarray = $array[-1..-($array.length)]
+if($array -eq $reversedarray) {
+return "true"} else {
+return "false"}
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> isAnagramm lol
+l
+o
+l
+false
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function isAnagramm {
+param($array)
+$array.tochararray() -join''
+$reversed_array = $array[-1..-($array.length)] -join''
+if($array -eq $reversed_array) {
+return "true"} else {
+return "false"}
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> isAnagramm шалаш
+шалаш
+true
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> function findLongestWord {
+param($string)
+return ($string | Measure-Object -Maximum -Property Length).Maximum
+}
+PS C:\Users\Lima148\Desktop\College\Операционные системы\Задания\Pr10> findLongestWord "hello", "hiiiiiiiiiiiiii"
+15

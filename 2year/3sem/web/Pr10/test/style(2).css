@@ -1,0 +1,31 @@
+p{
+    color: rgb(26, 216, 109);
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+li {
+    color: rgb(0, 0, 0);
+    margin: 5px 0;
+    font-style: italic;
+    padding: 10px;
+}
+#message {
+    color: red;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.b{
+    margin: 10px 0;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 15</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="tasks">
+        <form action="" class="form">
+            <label for="text">Enter new task</label>
+            <input type="text" class="form" id="input">
+            <input type="button" value="Enter" class="form" id="button">
+            <input type="button" value="Clear all Tasks" class="form" id="delete-button">
+        </form>
+
+        <div class="new_tasks">
+            <ul id="NewTasks"></ul>
+        </div>
+         <div class="inProcess_tasks">
+            <ul id="InProcessTasks"></ul>
+         </div>
+         <div class="done_tasks">
+            <ul id="DoneTasks"></ul>
+         </div>
+
+         <div class="name1">
+            <input type="button" value="Left" id="name1_left_button">
+            NEW TASKS
+            <input type="button" value="Right" id="name1_right_button">
+        </div>
+         <div class="name2">
+            <input type="button" value="Left" id="name2_left_button"> 
+            IN PROCESS
+            <input type="button" value="Right" id="name2_right_button">
+         </div>
+         <div class="name3">
+            <input type="button" value="Left" id="name3_left_button">
+            DONE
+            <input type="button" value="Right" id="name3_right_button">
+         </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

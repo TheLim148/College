@@ -1,0 +1,294 @@
+﻿PS C:\Users\Student.PTK\Litovchenko\pr10> function countVowels {
+param($string)
+$count = 0
+$charArray = $string.ToCharArray()
+for($i = 0; $i -lt $charArray.Length; $i++){
+if ($charArray.Contains("a", "e", "i", "o", "u", "y")) {
+$count++}
+}
+}
+
+PS C:\Users\Student.PTK\Litovchenko\pr10> countVowels "aaa"
+Не удается найти перегрузку для "Contains" и количества аргументов: "6".
+строка:6 знак:5
++ if ($charArray.Contains("a", "e", "i", "o", "u", "y")) {
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodException
+    + FullyQualifiedErrorId : MethodCountCouldNotFindBest
+Не удается найти перегрузку для "Contains" и количества аргументов: "6".
+строка:6 знак:5
++ if ($charArray.Contains("a", "e", "i", "o", "u", "y")) {
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodException
+    + FullyQualifiedErrorId : MethodCountCouldNotFindBest
+
+Не удается найти перегрузку для "Contains" и количества аргументов: "6".
+строка:6 знак:5
++ if ($charArray.Contains("a", "e", "i", "o", "u", "y")) {
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodException
+    + FullyQualifiedErrorId : MethodCountCouldNotFindBest
+Не удается найти перегрузку для "Contains" и количества аргументов: "6".
+строка:6 знак:5
++ if ($charArray.Contains("a", "e", "i", "o", "u", "y")) {
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodException
+    + FullyQualifiedErrorId : MethodCountCouldNotFindBest
+
+Не удается найти перегрузку для "Contains" и количества аргументов: "6".
+строка:6 знак:5
++ if ($charArray.Contains("a", "e", "i", "o", "u", "y")) {
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodException
+    + FullyQualifiedErrorId : MethodCountCouldNotFindBest
+Не удается найти перегрузку для "Contains" и количества аргументов: "6".
+строка:6 знак:5
++ if ($charArray.Contains("a", "e", "i", "o", "u", "y")) {
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodException
+    + FullyQualifiedErrorId : MethodCountCouldNotFindBest
+
+PS C:\Users\Student.PTK\Litovchenko\pr10> function countVowels {
+param($string)
+$count = 0
+$charArray = $string.ToCharArray()
+for($i = 0; $i -lt $charArray.Length; $i++){
+if ($charArray.Contains("a" -or "e" -or "i" -or "o" -or "u" -or "y")) {
+$count++}
+}
+}
+
+PS C:\Users\Student.PTK\Litovchenko\pr10> countVowels "aaa"
+PS C:\Users\Student.PTK\Litovchenko\pr10> function countVowels {
+param($string)
+$count = 0
+$charArray = $string.ToCharArray()
+for($i = 0; $i -lt $charArray.Length; $i++){
+if ($charArray.Contains("a" -or "e" -or "i" -or "o" -or "u" -or "y")) {
+$count++}
+}
+write-host $count
+}
+
+PS C:\Users\Student.PTK\Litovchenko\pr10> countVowels "aaa"
+0
+PS C:\Users\Student.PTK\Litovchenko\pr10> function countVowels {
+param($string)
+$count = 0
+#$charArray = $string.ToCharArray()
+for($i = 0; $i -lt $string.Length; $i++){
+if ($string.Contains("a" -or "e" -or "i" -or "o" -or "u" -or "y")) {
+$count++}
+}
+write-host $count
+}
+
+PS C:\Users\Student.PTK\Litovchenko\pr10> countVowels "aaa"
+0
+PS C:\Users\Student.PTK\Litovchenko\pr10> function countVowels {
+param($string)
+$count = 0
+#$charArray = $string.ToCharArray()
+for($i = 0; $i -lt $string.Length; $i++){
+if ($string.Contains('a' -or 'e' -or 'i' -or 'o' -or 'u' -or 'y')) {
+$count++}
+}
+write-host $count
+}
+
+PS C:\Users\Student.PTK\Litovchenko\pr10> countVowels "aaa"
+0
+PS C:\Users\Student.PTK\Litovchenko\pr10> function countVowels {
+param($string)
+$count = 0
+$charArray = $string.ToCharArray()
+for($i = 0; $i -lt $charArray.Length; $i++){
+if ($charArray -Contains('a' -or 'e' -or 'i' -or 'o' -or 'u' -or 'y')) {
+$count++}
+}
+write-host $count
+}
+
+PS C:\Users\Student.PTK\Litovchenko\pr10> countVowels "aaa"
+0
+PS C:\Users\Student.PTK\Litovchenko\pr10> countVowels "aaaeegg"
+0
+PS C:\Users\Student.PTK\Litovchenko\pr10> function countVowels {
+param($string)
+$charToCount = 'a', 'e', 'i', 'o', 'u'
+
+$count = 0
+$charArray = $string.ToCharArray()
+for($i = 0; $i -lt $charArray.Length; $i++){
+if ($charArray -Contains('a' -or 'e' -or 'i' -or 'o' -or 'u' -or 'y')) {
+$count++}
+}
+write-host $count
+}
+
+PS C:\Users\Student.PTK\Litovchenko\pr10> function countVowels {
+param($string)
+$charToCount = 'a', 'e', 'i', 'o', 'u'
+$charCount = ($string.ToCharArray() | Where-Object {$_ - eq $charToCount}).Count
+write-host $charCount
+}
+
+строка:4 знак:57
++ $charCount = ($string.ToCharArray() | Where-Object {$_ - eq $charToCo ...
++                                                         ~
+Необходимо предоставить выражение для значения справа от оператора "-".
+
+строка:4 знак:58
++ $charCount = ($string.ToCharArray() | Where-Object {$_ - eq $charToCo ...
++                                                          ~~
+Непредвиденная лексема "eq" в выражении или операторе.
+строка:4 знак:57
++ $charCount = ($string.ToCharArray() | Where-Object {$_ - eq $charToCo ...
++                                                         ~
+Необходимо предоставить выражение для значения справа от оператора "-".
+
+строка:4 знак:58
++ $charCount = ($string.ToCharArray() | Where-Object {$_ - eq $charToCo ...
++                                                          ~~
+Непредвиденная лексема "eq" в выражении или операторе.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ExpectedValueExpression
+
+PS C:\Users\Student.PTK\Litovchenko\pr10> function countVowels {
+param($string)
+$charToCount = 'a', 'e', 'i', 'o', 'u'
+$charCount = ($string.ToCharArray() | Where-Object {$_ -eq $charToCount}).Count
+write-host $charCount
+}
+
+PS C:\Users\Student.PTK\Litovchenko\pr10> countVowels "aa"
+0
+PS C:\Users\Student.PTK\Litovchenko\pr10> countVowels "aaii"
+0
+PS C:\Users\Student.PTK\Litovchenko\pr10> countVowels 'aaii'
+0
+PS C:\Users\Student.PTK\Litovchenko\pr10> function countVowels {
+param($string)
+$charToCount = 'a'
+$charCount = ($string.ToCharArray() | Where-Object {$_ -eq $charToCount}).Count
+write-host $charCount
+}
+
+PS C:\Users\Student.PTK\Litovchenko\pr10> countVowels 'aaii'
+2
+PS C:\Users\Student.PTK\Litovchenko\pr10> countVowels 'aaaii'
+3
+PS C:\Users\Student.PTK\Litovchenko\pr10> countVowels 'ii'
+0
+PS C:\Users\Student.PTK\Litovchenko\pr10> function countVowels {
+param($string)
+$charToCount = 'i'
+$charCount = ($string.ToCharArray() | Where-Object {$_ -eq 'a'}).Count
+write-host $charCount
+}
+
+PS C:\Users\Student.PTK\Litovchenko\pr10> countVowels 'ii'
+0
+PS C:\Users\Student.PTK\Litovchenko\pr10> countVowels 'aa'
+2
+PS C:\Users\Student.PTK\Litovchenko\pr10> function countVowels {
+param($string)
+$charToCount = 'i'
+$charCount = ($string.ToCharArray() | Where-Object {$_ -eq 'a' -or 'i' -or 'e'}).Count
+write-host $charCount
+}
+
+PS C:\Users\Student.PTK\Litovchenko\pr10> countVowels 'aai'
+3
+PS C:\Users\Student.PTK\Litovchenko\pr10> function countVowels {
+param($string)
+$charToCount = 'i'
+$charCount = ($string.ToCharArray() | Where-Object {$_ -eq 'a' -or 'i' -or 'e' -or 'o', 'u'}).Count
+write-host $charCount
+}
+
+PS C:\Users\Student.PTK\Litovchenko\pr10> countVowels 'aeiou'
+5
+PS C:\Users\Student.PTK\Litovchenko\pr10> function isPrime {
+param($number)
+if ($number -le 1) {
+for($i = 2; $i -le $number; $i++){
+if($number % $i -eq 0) {
+write-host("True")} else {write-host("False")}
+}
+}
+}
+PS C:\Users\Student.PTK\Litovchenko\pr10> isPrime 1
+PS C:\Users\Student.PTK\Litovchenko\pr10> function isPrime {
+param($number)
+if ($number -le 1) {
+for($i = 2; $i -le $number; $i++){
+if($number % $i -eq 0) {
+write-host("True")} else {write-host("False")}
+}
+}
+write-host("$number less than 1")
+}
+PS C:\Users\Student.PTK\Litovchenko\pr10> isPrime 1
+1 less than 1
+PS C:\Users\Student.PTK\Litovchenko\pr10> function isPrime {
+param($number)
+if ($number -le 1) {
+for($i = 2; $i -le $number; $i++){
+if($number % $i -eq 0) {
+write-host("True")} else {write-host("False")}
+}
+}
+write-host("$number less or equal 1")
+}
+PS C:\Users\Student.PTK\Litovchenko\pr10> isPrime 1
+1 less or equal 1
+PS C:\Users\Student.PTK\Litovchenko\pr10> isPrime -1
+-1 less or equal 1
+PS C:\Users\Student.PTK\Litovchenko\pr10> isPrime 2
+2 less or equal 1
+PS C:\Users\Student.PTK\Litovchenko\pr10> isPrime 3
+3 less or equal 1
+PS C:\Users\Student.PTK\Litovchenko\pr10> isPrime 4000
+4000 less or equal 1
+PS C:\Users\Student.PTK\Litovchenko\pr10> function isPrime {
+param($number)
+if ($number -le 1) {
+write-host("$number less or equal 1")
+} else{
+for($i = 2; $i -le $number; $i++){
+if($number % $i -eq 0) {
+write-host("True")} else {write-host("False")}
+}
+}
+}
+PS C:\Users\Student.PTK\Litovchenko\pr10> isPrime 1
+1 less or equal 1
+PS C:\Users\Student.PTK\Litovchenko\pr10> isPrime -1
+PS C:\Users\Student.PTK\Litovchenko\pr10> isPrime 2
+True
+PS C:\Users\Student.PTK\Litovchenko\pr10> isPrime 3
+False
+True
+PS C:\Users\Student.PTK\Litovchenko\pr10> 5
+5
+PS C:\Users\Student.PTK\Litovchenko\pr10> isPrime 5
+False
+False
+False
+True
+PS C:\Users\Student.PTK\Litovchenko\pr10> function isPrime {
+param($number)
+if ($number -lt 1) {
+write-host("$number less or equal 1")
+} else{
+for($i = 2; $i -lt $number; $i++){
+if($number % $i -eq 0) {
+write-host("True") else {write-host("False")}
+}
+}
+}
+}
+PS C:\Users\Student.PTK\Litovchenko\pr10> isPrime 5
+PS C:\Users\Student.PTK\Litovchenko\pr10> isPrime -1
+PS C:\Users\Student.PTK\Litovchenko\pr10> isPrime 1

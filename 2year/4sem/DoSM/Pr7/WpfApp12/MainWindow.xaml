@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApp12.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp12"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" x:Name="Window">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Background 1" Click="bg_color_1"/>
+            <MenuItem Header="Background 2" Click="bg_color_2"/>
+            <MenuItem Header="Background 3" Click="bg_color_3"/>
+            <MenuItem Header="About" Click="dev_info"/>
+            <MenuItem Header="Close" Click="Close"/>
+        </Menu>
+        
+        <Grid>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Button Content="Background 1" Width="90" Height="20" Click="bg_color_1" MouseEnter="bg_color_1_hover" MouseLeave="default_hover" Margin="4,4,4,4"/>
+                <Button Content="Background 2" Width="90" Height="20" Click="bg_color_2" MouseEnter="bg_color_2_hover" MouseLeave="default_hover" Margin="4,4,4,4"/>
+                <Button Content="Background 3" Width="90" Height="20" Click="bg_color_3" MouseEnter="bg_color_3_hover" MouseLeave="default_hover" Margin="4,4,4,4"/>
+                <Button Content="About" Width="90" Height="20" Click="dev_info" MouseEnter="dev_info_hover" MouseLeave="default_hover" Margin="4,4,4,4"/>
+                <Button Content="Close" Width="90" Height="20" Click="Close" MouseEnter="Close_hover" MouseLeave="default_hover" Margin="4,4,4,4"/>
+            </StackPanel>
+
+            <TextBlock Text="Status bar" x:Name="statusBar" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="16"/>
+        </Grid>
+    </DockPanel>
+</Window>

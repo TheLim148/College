@@ -1,0 +1,228 @@
+-- Даны таблицы:
+-- ТОЧКА_ВЫДАЧИ (Код_точки, Адрес, Телефон),
+create table pickup_point (
+    point_id serial primary key,
+    address text not null,
+    phone varchar(20)
+);
+
+insert into pickup_point (address, phone) values 
+('Проспект А. Корсунова, 1', '+79111111111'),
+('Улица Ломоносова, 25', '+79222222222');
+
+select * from pickup_point;
+
+
+-- ТОВАРЫ (Код_товара, Товар, Цена),
+create table products (
+    product_id serial primary key,
+    product_name text not null,
+    price numeric(10,2) not null check (price >= 0)
+);
+
+insert into products (product_name, price) values 
+('Ноутбук', 50000.00),
+('Мышь', 1500.00),
+('Клавиатура', 3000.00);
+
+select * from products;
+
+
+-- ЗАКАЗЫ (Код_точки, Код_товара, Дата_заказа, Количество, Сумма)
+create table orders (
+    order_id serial primary key,
+    point_id integer references pickup_point(point_id),
+    product_id integer references products(product_id),
+    order_date date not null default current_date,
+    quantity integer not null check (quantity > 0),
+    total_amount numeric(10,2) check (total_amount >= 0)
+);
+
+insert into orders (point_id, product_id, quantity)
+values (1, 1, 2), (1, 2, 5);
+
+select * from orders;
+
+-- 1. Создайте представление для анализа заказов и INSTEAD OF триггер для управления данными
+create view v_order_analysis as
+select 
+    o.order_id,
+    pp.address,
+    p.product_name,
+    o.order_date,
+    o.quantity,
+    p.price,
+    o.total_amount
+from orders o
+join pickup_point pp on o.point_id = pp.point_id
+join products p on o.product_id = p.product_id;
+
+select * from v_order_analysis;
+
+---
+
+create or replace function instead_of_analysis_trigger()
+returns trigger as $$
+begin
+    if tg_op = 'INSERT' then
+        insert into orders (point_id, product_id, order_date, quantity, total_amount)
+        values (
+            (select point_id from pickup_point where address = new.address),
+            (select product_id from products where product_name = new.product_name),
+            new.order_date,
+            new.quantity,
+            new.quantity * (select price from products where product_name = new.product_name)
+        );
+        return new;
+    end if;
+    return null;
+end $$ language plpgsql;
+
+create trigger instead_of_analysis_trigger
+instead of insert on v_order_analysis
+for each row execute function instead_of_analysis_trigger();
+
+insert into v_order_analysis (address, product_name, order_date, quantity)
+values ('Улица ленина, 1', 'Ноутбук', '2024-06-15', 3);
+
+select * from v_order_analysis where order_id = (select max(order_id) from orders);
+
+select * from orders where order_id = (select max(order_id) from orders);
+
+-- 2. Реализуйте триггер для автоматического расчета суммы с проверкой наличия товара
+create or replace function calculate_order_total()
+returns trigger as $$
+declare
+    product_price numeric(10,2);
+begin
+    select price into product_price 
+    from products 
+    where product_id = new.product_id;
+    
+    if product_price is null then
+        raise exception 'Товара с айди % не существует', new.product_id;
+    end if;
+    
+    new.total_amount := new.quantity * product_price;
+    
+    return new;
+end $$ language plpgsql;
+
+create trigger calculate_order_total_trigger
+before insert or update on orders
+for each row execute function calculate_order_total();
+
+select * from orders;
+
+-- 3. Создание хранимых процедур и функций:
+-- 3.1. Создайте хранимую процедуру: оптимизация товарных запасов точек выдачи
+create or replace procedure optimize_inventory()
+as $$
+declare
+    inventory_record record;
+begin
+    create temp table if not exists inventory_results (
+        point_id integer,
+        address text,
+        product_id integer,
+        product_name text,
+        avg_quantity numeric(10,2),
+        recommendation text
+    );
+    
+    truncate inventory_results;
+    
+    insert into inventory_results
+    with stats as (
+        select 
+            o.point_id,
+            o.product_id,
+            avg(o.quantity) as avg_quantity,
+            stddev(o.quantity) as quantity_stddev
+        from orders o
+        group by o.point_id, o.product_id
+    )
+    select 
+        pp.point_id,
+        pp.address,
+        p.product_id,
+        p.product_name,
+        st.avg_quantity,
+        case 
+            when st.avg_quantity > 100 then 'Избыточный инвентарь'
+            when st.avg_quantity < 10 then 'Бедный инвентарь'
+            else 'Нормальный инвентарь'
+        end as recommendation
+    from stats st
+    join pickup_point pp on st.point_id = pp.point_id
+    join products p on st.product_id = p.product_id;
+    
+    for inventory_record in 
+        select * from inventory_results order by point_id, product_id
+    loop
+        raise notice 'Код Точки: %, Адрес: %, Товар: %, Среднее количество: %, Рекомендация: %',
+            inventory_record.point_id,
+            inventory_record.address,
+            inventory_record.product_name,
+            inventory_record.avg_quantity,
+            inventory_record.recommendation;
+    end loop;
+    
+end $$ language plpgsql;
+
+
+call optimize_inventory();
+
+-- 3.2. Создайте хранимую функцию: анализ сезонности спроса на товары
+create or replace function analyze_seasonality(analysis_year integer default null)
+returns table (
+    product_name text,
+    quarter integer,
+    avg_volume numeric(10,2),
+    demand_level text
+) as $$
+declare
+    overall_avg numeric(10,2);
+begin
+    if analysis_year is null then
+        analysis_year := extract(year from current_date);
+    end if;
+
+    select avg(seasonal_data.avg_volume) into overall_avg
+    from (
+        select 
+            p.product_name,
+            extract(quarter from o.order_date) as quarter,
+            avg(o.quantity) as avg_volume
+        from orders o
+        join products p on o.product_id = p.product_id
+        where extract(year from o.order_date) = analysis_year
+        group by p.product_name, extract(quarter from o.order_date)
+    ) as seasonal_data;
+
+    return query
+    with seasonal_data as (
+        select 
+            p.product_name,
+            extract(quarter from o.order_date) as quarter,
+            avg(o.quantity) as avg_volume
+        from orders o
+        join products p on o.product_id = p.product_id
+        where extract(year from o.order_date) = analysis_year
+        group by p.product_name, extract(quarter from o.order_date)
+    )
+    select 
+        sd.product_name,
+        sd.quarter::integer,
+        sd.avg_volume,
+        case 
+            when sd.avg_volume > overall_avg * 1.2 then 'Высокий'
+            when sd.avg_volume < overall_avg * 0.8 then 'Низкий'
+            else 'Средний'
+        end as demand_level
+    from seasonal_data sd
+    order by sd.product_name, sd.quarter;
+end $$ language plpgsql;
+
+
+select * from analyze_seasonality(2025);

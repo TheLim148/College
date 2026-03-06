@@ -1,0 +1,116 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lima148\\Desktop\\BookingTheater\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{577564E8-6708-4E15-ACFF-852D3DB6F5F9}|BookingTheater\\BookingTheater.csproj|c:\\users\\lima148\\desktop\\bookingtheater\\bookingtheater\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{577564E8-6708-4E15-ACFF-852D3DB6F5F9}|BookingTheater\\BookingTheater.csproj|solutionrelative:bookingtheater\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00180254-6BA9-4B30-815C-A23AF63321D1}|UnitTests\\UnitTests.csproj|C:\\Users\\Lima148\\Desktop\\BookingTheater\\unittests\\unittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00180254-6BA9-4B30-815C-A23AF63321D1}|UnitTests\\UnitTests.csproj|solutionrelative:unittests\\unittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{577564E8-6708-4E15-ACFF-852D3DB6F5F9}|BookingTheater\\BookingTheater.csproj|C:\\Users\\Lima148\\Desktop\\BookingTheater\\bookingtheater\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{577564E8-6708-4E15-ACFF-852D3DB6F5F9}|BookingTheater\\BookingTheater.csproj|solutionrelative:bookingtheater\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00180254-6BA9-4B30-815C-A23AF63321D1}|UnitTests\\UnitTests.csproj|C:\\Users\\Lima148\\Desktop\\BookingTheater\\unittests\\spectaclevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00180254-6BA9-4B30-815C-A23AF63321D1}|UnitTests\\UnitTests.csproj|solutionrelative:unittests\\spectaclevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00180254-6BA9-4B30-815C-A23AF63321D1}|UnitTests\\UnitTests.csproj|C:\\Users\\Lima148\\Desktop\\BookingTheater\\unittests\\spectacle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00180254-6BA9-4B30-815C-A23AF63321D1}|UnitTests\\UnitTests.csproj|solutionrelative:unittests\\spectacle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{577564E8-6708-4E15-ACFF-852D3DB6F5F9}|BookingTheater\\BookingTheater.csproj|C:\\Users\\Lima148\\Desktop\\BookingTheater\\bookingtheater\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{577564E8-6708-4E15-ACFF-852D3DB6F5F9}|BookingTheater\\BookingTheater.csproj|solutionrelative:bookingtheater\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SpectacleValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Lima148\\Desktop\\BookingTheater\\UnitTests\\SpectacleValidator.cs",
+              "RelativeDocumentMoniker": "UnitTests\\SpectacleValidator.cs",
+              "ToolTip": "C:\\Users\\Lima148\\Desktop\\BookingTheater\\UnitTests\\SpectacleValidator.cs",
+              "RelativeToolTip": "UnitTests\\SpectacleValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T20:04:58.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Spectacle.cs",
+              "DocumentMoniker": "C:\\Users\\Lima148\\Desktop\\BookingTheater\\UnitTests\\Spectacle.cs",
+              "RelativeDocumentMoniker": "UnitTests\\Spectacle.cs",
+              "ToolTip": "C:\\Users\\Lima148\\Desktop\\BookingTheater\\UnitTests\\Spectacle.cs",
+              "RelativeToolTip": "UnitTests\\Spectacle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T20:04:28.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UnitTest.cs",
+              "DocumentMoniker": "C:\\Users\\Lima148\\Desktop\\BookingTheater\\UnitTests\\UnitTest.cs",
+              "RelativeDocumentMoniker": "UnitTests\\UnitTest.cs",
+              "ToolTip": "C:\\Users\\Lima148\\Desktop\\BookingTheater\\UnitTests\\UnitTest.cs",
+              "RelativeToolTip": "UnitTests\\UnitTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T19:44:19.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Lima148\\Desktop\\BookingTheater\\BookingTheater\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "BookingTheater\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\Lima148\\Desktop\\BookingTheater\\BookingTheater\\Form1.Designer.cs",
+              "RelativeToolTip": "BookingTheater\\Form1.Designer.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAASwIUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T17:10:04.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Lima148\\Desktop\\BookingTheater\\BookingTheater\\Form1.cs",
+              "RelativeDocumentMoniker": "BookingTheater\\Form1.cs",
+              "ToolTip": "C:\\Users\\Lima148\\Desktop\\BookingTheater\\BookingTheater\\Form1.cs",
+              "RelativeToolTip": "BookingTheater\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T16:49:52.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Lima148\\Desktop\\BookingTheater\\BookingTheater\\Form1.cs",
+              "RelativeDocumentMoniker": "BookingTheater\\Form1.cs",
+              "ToolTip": "C:\\Users\\Lima148\\Desktop\\BookingTheater\\BookingTheater\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "BookingTheater\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T16:47:12.913Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
