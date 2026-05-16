@@ -1,0 +1,32 @@
+test_01_regular_user_without_promo_success (test_integration.TestShopIntegration.test_01_regular_user_without_promo_success) ... ok
+test_02_premium_user_with_promo_gets_discount (test_integration.TestShopIntegration.test_02_premium_user_with_promo_gets_discount) ... FAIL
+test_03_premium_order_should_be_below_limit_after_discount (test_integration.TestShopIntegration.test_03_premium_order_should_be_below_limit_after_discount) ... FAIL
+test_04_regular_user_with_promo_has_no_premium_discount (test_integration.TestShopIntegration.test_04_regular_user_with_promo_has_no_premium_discount) ... ok
+test_05_module_b_to_c_direct_premium_discount_success (test_integration.TestShopIntegration.test_05_module_b_to_c_direct_premium_discount_success) ... ok
+test_06_module_b_to_c_direct_premium_discount_still_over_limit (test_integration.TestShopIntegration.test_06_module_b_to_c_direct_premium_discount_still_over_limit) ... ok
+test_07_empty_cart_can_be_processed (test_integration.TestShopIntegration.test_07_empty_cart_can_be_processed) ... ok
+test_08_boundary_payment_limit_success (test_integration.TestShopIntegration.test_08_boundary_payment_limit_success) ... ok
+test_09_payment_limit_exceeded (test_integration.TestShopIntegration.test_09_payment_limit_exceeded) ... ok
+
+======================================================================
+FAIL: test_02_premium_user_with_promo_gets_discount (test_integration.TestShopIntegration.test_02_premium_user_with_promo_gets_discount)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/pw11_shop_integration/tests/test_integration.py", line 48, in test_02_premium_user_with_promo_gets_discount
+    self.assertEqual(result["discount_rate"], Decimal("0.10"))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Decimal('0.00') != Decimal('0.10')
+
+======================================================================
+FAIL: test_03_premium_order_should_be_below_limit_after_discount (test_integration.TestShopIntegration.test_03_premium_order_should_be_below_limit_after_discount)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/pw11_shop_integration/tests/test_integration.py", line 59, in test_03_premium_order_should_be_below_limit_after_discount
+    self.assertEqual(result["discount_rate"], Decimal("0.10"))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Decimal('0.00') != Decimal('0.10')
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.005s
+
+FAILED (failures=2)

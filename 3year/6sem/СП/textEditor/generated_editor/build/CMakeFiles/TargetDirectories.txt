@@ -1,0 +1,3 @@
+/home/lima148/Documents/College/3year/6sem/СП/textEditor/generated_editor/build/CMakeFiles/editor.dir
+/home/lima148/Documents/College/3year/6sem/СП/textEditor/generated_editor/build/CMakeFiles/edit_cache.dir
+/home/lima148/Documents/College/3year/6sem/СП/textEditor/generated_editor/build/CMakeFiles/rebuild_cache.dir
